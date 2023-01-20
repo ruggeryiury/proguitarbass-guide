@@ -1,0 +1,63 @@
+// Tailwind CSS import
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Fonts
+@font-face {
+    font-family: "Pentatonic";
+    src: url("../fonts/Pentatonic-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Pentatonic";
+    font-stretch: condensed;
+    src: url("../fonts/Pentatonic-RegularCond.woff") format("woff");
+}
+@font-face {
+    font-family: "Aeroport";
+    src: url("../fonts/Aeroport.woff") format("woff");
+}
+@font-face {
+    font-family: "Aeroport";
+    font-style: italic;
+    src: url("../fonts/Aeroport-Italic.woff") format("woff");
+}
+@font-face {
+    font-family: "Aeroport";
+    font-weight: bold;
+    src: url("../fonts/Aeroport-Bold.woff") format("woff");
+}
+@font-face {
+    font-family: "Aeroport";
+    font-weight: bold;
+    font-style: italic;
+    src: url("../fonts/Aeroport-BoldItalic.woff") format("woff");
+}
+
+// Globals
+* {
+    margin: 0;
+    line-height: 1.50;
+}
+body {
+    @apply subpixel-antialiased flex flex-col items-center w-full
+    bg-fixed bg-[url('../images/background.webp')] bg-top bg-cover bg-no-repeat
+    text-center text-main-white text-base font-title;
+}
+#root {
+    // Here the backdrop
+    @apply flex flex-col items-center w-full h-screen bg-main-black/[.97];
+}
+div,
+main,
+header,
+footer,
+button,
+a {
+    @apply flex flex-col;
+}
+
+p,
+li {
+    @apply pl-2 pr-4 font-text text-left text-lg tracking-tight cursor-text mb-4;
+}

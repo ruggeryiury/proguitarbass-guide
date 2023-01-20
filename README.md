@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Ruggy PRO Guitar/Bass Guide
+Originally released as a *.PDF book*, then as a raw, yet stylish Tumblr page, my *PRO Guitar/Bass Guide* were written during my experiments with **Rock Band 3's** *PRO Guitar/Bass* authoring, discovering and testing brand new features with a big help from big *PRO Guitar/Bass* mode players (like [PinkyMilo]()).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I've stuctured my guide to be as most intuitive as possible, with every step explained, with videos with self-recorded guitar lines and MIDI samples, which can be downloaded and loaded on REAPER by just dragging with MIDI file into it.
 
-## Available Scripts
+# 💠  Table of Contents
+- [Technologies]()
+- [Changelog]()
 
-In the project directory, you can run:
+## ⚙️ Technologies
+- [React App](https://create-react-app.dev/), using [TypeScript](https://www.typescriptlang.org/) template.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.
+    -  *Install with NPM:*  `npm i -D tailwindcss`
+- [React Router DOM](https://www.npmjs.com/package/react-router-dom): Declarative routing for React web applications.
+    -  *Install with NPM:*  `npm i react-router-dom`
+- [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link): A solution to React Router's issue of not scrolling to `#hash-fragments` when using the `<Link>` component to navigate.
+    -  *Install with NPM:*  `npm i react-router-hash-link`
+    - *Type Declarations:* `npm i -D @types/react-router-hash-link`
+- [React Icons](https://www.npmjs.com/package/react-icons): Include popular icons in your React projects easly with react-icons.
+    -  *Install with NPM:*  `npm i react-icons`
+- [Sass](https://www.npmjs.com/package/sass): A pure JavaScript implementation of Sass.
+    -  *Install with NPM:*  `npm i sass`
+- [Animate.css](): Just-add-water CSS animations.
+    -  *Install with NPM:*  `npm i animate.css`
+- [Github Pages](https://www.npmjs.com/package/gh-pages): Publish to a gh-pages branch on GitHub (or any other branch on any other remote).
+    -  *Install with NPM:*  `npm i -D gh-pages`
+- [React HTML5 Video](https://www.npmjs.com/package/react-html5video): A customizeable HoC (Higher Order Component) for HTML5 Video that allows custom and configurable controls.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔄  Changelog
+- See the [Changelog](https://github.com/ruggeryiury/proguitarbass-guide/blob/master/CHANGELOG.md).
+	- *Current version: 0.1.0*
+	- *Deployed version: 0.1.0*

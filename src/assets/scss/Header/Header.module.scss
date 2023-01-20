@@ -1,0 +1,10 @@
+.ButtonsDropdownMenu {
+    @apply absolute w-full left-0 top-full bg-main-black/[.99] rounded-b-md mb-2 p-2 border-b-2 border-x-2 border-main-white/25 animate-rotateMenu origin-top;
+
+    > .ButtonsDropdownMenuLinks {
+        @apply rounded-md last:mb-0 leading-none;
+    }
+}
+.ButtonsDropdownMenuLinks {
+    @apply py-4 font-condensed hover:bg-[#262626] px-4 mb-1 border-2 border-main-white/5;
+}
