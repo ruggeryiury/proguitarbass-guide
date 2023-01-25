@@ -7,8 +7,14 @@ Originally released as a *.PDF book*, then as a raw, yet stylish Tumblr page, my
 I've stuctured my guide to be as most intuitive as possible, with every step explained, with videos with self-recorded guitar lines and MIDI samples, which can be downloaded and loaded on REAPER by just dragging with MIDI file into it.
 
 # 💠  Table of Contents
+- [Features](#-features)
 - [Technologies](#%EF%B8%8F-technologies)
 - [Changelog](#-changelog)
+
+## 🚀 Features
+- **Fully Responsive:** This web app was created under the *mobile-first*  concept. Responsive web design is a web design method that enables web to fit the screens of different devices automatically, displaying the content in a way that people feel comfortable. This greatly reduces users’ operations like panning, zooming and scrolling when browsing the web. *Mobile first*, as the name suggests, means that I started the product design from the mobile end which has more restrictions, then expand its features to create a tablet or desktop version.
+
+- **Works as Progressive Web Apps:** Progressive Web Apps (PWAs) are web apps that use service workers, manifests, and other web-platform features in combination with progressive enhancement to give users an experience on par with native apps. PWAs provide a number of advantages to users — including being installable, progressively enhanced, responsively designed, re-engageable, linkable, discoverable, network independent, and secure.
 
 ## ⚙️ Technologies
 - [React App](https://create-react-app.dev/), using [TypeScript](https://www.typescriptlang.org/) template.
