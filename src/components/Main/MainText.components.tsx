@@ -9,14 +9,14 @@ export const MainTextParagraph: React.FC<React.PropsWithChildren> = ({ children 
 }
 
 export const MainTextBlock: React.FC<React.PropsWithChildren<MainTextBlockProps>> = ({ children, color, invertTextColor }) => {
-    return <span className={`inline-flex font-title py-1 px-2 rounded-sm text-sm mx-1 tracking-normal self-center relative -top-[0.10rem] ${color ? "" : "bg-cyan-600"}`} style={{
+    return <span className={`inline-flex font-title py-1 px-2 rounded-sm text-sm mx-1 tracking-normal self-center relative -top-[0.10rem] ${color ? "" : "bg-cyan-800"}`} style={{
         backgroundColor: color ? color : "",
         color: invertTextColor ? "#080808" : ""
     }}>{children}</span>
 }
 
 export const MainTextList: React.FC<React.PropsWithChildren<MainTextListProps>> = ({ children, title }) => {
-    return <li>
+    return <li className='list-inside list-disc'>
         <span className="relative -ml-2 z-[-1]">
             <strong className="text-cyan-500 ">{typeof title === 'string' ? `${title}: ` : title}</strong>
             {children ? children : ""}
@@ -25,7 +25,7 @@ export const MainTextList: React.FC<React.PropsWithChildren<MainTextListProps>> 
 }
 
 export const MainTextOptions: React.FC<React.PropsWithChildren> = ({ children }) => {
-    return <li className="mb-0 last:mb-4">{children}</li>
+    return <li className="list-inside list-disc mb-0 last:mb-4">{children}</li>
 }
 
 export const MainTextHref: React.FC<React.PropsWithChildren<MainTextHrefProps>> = ({ children, href }) => {
@@ -43,7 +43,7 @@ export const MainTextHref: React.FC<React.PropsWithChildren<MainTextHrefProps>> 
 }
 
 export const MainTextLink: React.FC<React.PropsWithChildren<MainTextLinkProps>> = ({ children, to, title }) => {
-    return <li>
+    return <li className='list-inside list-disc'>
         <span className="relative -ml-2 z-[-1]"></span>
         <a href={to} target="_blank" rel="noreferrer" className='tracking-tight inline-flex font-bold text-cyan-500 hover:underline'>{title}</a>: {children}
     </li>

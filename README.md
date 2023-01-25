@@ -7,8 +7,8 @@ Originally released as a *.PDF book*, then as a raw, yet stylish Tumblr page, my
 I've stuctured my guide to be as most intuitive as possible, with every step explained, with videos with self-recorded guitar lines and MIDI samples, which can be downloaded and loaded on REAPER by just dragging with MIDI file into it.
 
 # 💠  Table of Contents
-- [Technologies]()
-- [Changelog]()
+- [Technologies](#%EF%B8%8F-technologies)
+- [Changelog](#-changelog)
 
 ## ⚙️ Technologies
 - [React App](https://create-react-app.dev/), using [TypeScript](https://www.typescriptlang.org/) template.

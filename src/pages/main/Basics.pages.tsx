@@ -13,12 +13,12 @@ export const Notes = () => {
             <Paragraph>
                 To determine the strings of a note, we use these MIDI notes:
             </Paragraph>
-            <div>
+            <ul>
                 <Options>From <Block>C6</Block> (96) to <Block>F6</Block> (101) for Expert difficulty.</Options>
                 <Options>From <Block>C4</Block> (72) to <Block>F4</Block> (77) for Hard difficulty.</Options>
                 <Options>From <Block>C2</Block> (48) to <Block>F2</Block> (53) for Medium difficulty.</Options>
                 <Options>From <Block>C0</Block> (24) to <Block>F0</Block> (29) for Easy difficulty.</Options>
-            </div>
+            </ul>
 
             <Title id='frets'>Frets</Title>
             <Paragraph>

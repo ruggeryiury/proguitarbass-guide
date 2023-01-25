@@ -29,10 +29,10 @@ export const SlideNotes = () => {
                 <br /><br />
                 Actually, <strong className="text-cyan-500">SLIDE NOTE MARKERS</strong> directions have two rules they can follow:
                 <br />
-                <div>
+                <ul>
                     <Options>The <span className="text-cyan-500">FRET</span> rule, by default.</Options>
                     <Options>The <span className="text-cyan-500">1/16 NOTE GAP</span> rule.</Options>
-                </div>
+                </ul>
                 If you want to reverse the slide direction under any of this conditions, you must encode the <strong className="text-cyan-500">SLIDE NOTE MARKER</strong> on <Block>MIDI CHANNEL 12</Block>.
                 <br /><br />
                 You can also encopass multiple notes/chords within one <strong className="text-cyan-500">SLIDE NOTE MARKER</strong> just like on <Href href="/hopos">HO/POs</Href>, but every note/chord will follow the rules according to each specific situation.

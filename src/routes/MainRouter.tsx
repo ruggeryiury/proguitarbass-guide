@@ -3,7 +3,7 @@ import Header from "../components/Header/Header"
 import IndexPage from "../pages/main/IndexPage"
 import { Notes, Chords } from "../pages/main/Basics.pages"
 import { MutedNotes, SlideNotes } from "../pages/main/NotesPages"
-import { Arpeggio, HOPO, StringEmphasisStrummingPattern } from "../pages/main/Markers.pages"
+import { Arpeggio, HOPO, StringEmphasis } from "../pages/main/Markers.pages"
 import { CustomChordNames, FretHandPosition, NoteEncondings, OverdriveSoloBRE, TrainerSections } from "../pages/main/Events.pages"
 import ErrorPage from "../pages/ErrorPage"
 import { CommonMAGMAErrors, Reductions, Tunings } from "../pages/main/Mastering.pages"
@@ -27,7 +27,7 @@ const MainRouter = () => {
                 (Markers)
                 <Route path='/hopo' element={<HOPO />} />
                 <Route path='/arpeggio' element={<Arpeggio />} />
-                <Route path='/string-emphasis-strumming-pattern' element={<StringEmphasisStrummingPattern />} />
+                <Route path='/string-emphasis' element={<StringEmphasis />} />
 
                 (Events)
                 <Route path='/fret-hand-position' element={<FretHandPosition />} />

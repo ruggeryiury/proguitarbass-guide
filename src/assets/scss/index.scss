@@ -7,31 +7,37 @@
 @font-face {
     font-family: "Pentatonic";
     src: url("../fonts/Pentatonic-Regular.woff") format("woff");
+    font-display: swap;
 }
 @font-face {
     font-family: "Pentatonic";
     font-stretch: condensed;
     src: url("../fonts/Pentatonic-RegularCond.woff") format("woff");
+    font-display: swap;
 }
 @font-face {
     font-family: "Aeroport";
     src: url("../fonts/Aeroport.woff") format("woff");
+    font-display: swap;
 }
 @font-face {
     font-family: "Aeroport";
     font-style: italic;
     src: url("../fonts/Aeroport-Italic.woff") format("woff");
+    font-display: swap;
 }
 @font-face {
     font-family: "Aeroport";
     font-weight: bold;
     src: url("../fonts/Aeroport-Bold.woff") format("woff");
+    font-display: swap;
 }
 @font-face {
     font-family: "Aeroport";
     font-weight: bold;
     font-style: italic;
     src: url("../fonts/Aeroport-BoldItalic.woff") format("woff");
+    font-display: swap;
 }
 
 // Globals
@@ -45,7 +51,6 @@ body {
     text-center text-main-white text-base font-title;
 }
 #root {
-    // Here the backdrop
     @apply flex flex-col items-center w-full h-screen bg-main-black/[.97];
 }
 div,

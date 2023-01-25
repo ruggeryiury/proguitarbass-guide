@@ -38,7 +38,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ activated, action }) => {
         <>
             <div id='HeaderMenuBG' className="fixed bg-main-black/90 z-20 w-full h-screen duration-300" style={{ left: '-100%' }}>
                 <div className="w-[10%] ml-auto items-center py-2">
-                    <button className="w-fit" onClick={ev => CloseHeaderMenu()}>
+                    <button aria-label='Close Header Menu' className="w-fit" onClick={ev => CloseHeaderMenu()}>
                         <IoCloseSharp className="text-2xl" />
                     </button>
                 </div>
@@ -62,7 +62,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ activated, action }) => {
                 <div>
                     <Link to='/hopo' onClick={ev => CloseHeaderMenu()}>HO/POs</Link>
                     <Link to='/arpeggios' onClick={ev => CloseHeaderMenu()}>ARPEGGIOS</Link>
-                    <Link to='/string-strumming-patterns' onClick={ev => CloseHeaderMenu()}>STRING EMPHASIS / STRUMMING PATTERNS</Link>
+                    <Link to='/string-emphasis' onClick={ev => CloseHeaderMenu()}>STRING EMPHASIS</Link>
                 </div>
                 <h2>EVENTS</h2>
                 <div>

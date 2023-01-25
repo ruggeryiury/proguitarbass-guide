@@ -32,7 +32,7 @@ const Header = () => {
                         <ButtonArea title="Markers">
                             <HeaderDropdownButtons title="HO/POs" url="/hopo" />
                             <HeaderDropdownButtons title="Arpeggio" url="/arpeggio" />
-                            <HeaderDropdownButtons title="String Emphasis / Strumming Pattern" url="/string-emphasis-strumming-pattern" />
+                            <HeaderDropdownButtons title="String Emphasis" url="/string-emphasis" />
                         </ButtonArea>
                         <ButtonArea title="Events">
                             <HeaderDropdownButtons title="Fret Hand Position" url="/fret-hand-position" />
@@ -47,7 +47,7 @@ const Header = () => {
                             <HeaderDropdownButtons title="Common MAGMA Errors" url="/common-magma-errors" />
                         </ButtonArea>
                     </div>
-                    <button className='border-2 p-1 border-main-white/25 ml-auto rounded-md flex laptop:hidden' onClick={ev => HandleHeaderButton(ev)}><FiMenu className='text-xl tablet-md:text-base' /></button>
+                    <button aria-label='Header Menu' className='border-2 p-1 border-main-white/25 ml-auto rounded-md flex laptop:hidden' onClick={ev => HandleHeaderButton(ev)}><FiMenu className='text-xl tablet-md:text-base' /></button>
                 </div>
             </header>
         </>
