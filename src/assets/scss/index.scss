@@ -67,11 +67,11 @@ table, th, td {
     @apply border-b border-main-white/50 text-left p-2;
 }
 table {
-    @apply border border-main-white/50 w-full tablet-md:w-[80%] laptop:w-[50%];
+    @apply border border-main-white/50 w-full tablet-md:w-[80%] laptop:w-[50%] text-left;
 }
 th {
     @apply bg-cyan-600;
 }
 tr {
-    @apply even:bg-main-white/5
+    @apply even:bg-main-white/5;
 }
