@@ -43,19 +43,19 @@ export const NoteEncondings = () => {
             <Title id='channelUsedOnMarkers'>Channel Used on Markers</Title>
             <ul>
                 <Options>
-                    <Block color="#8c6f5e">MIDI CHANNEL 12</Block>: Used on <Href href="/slide-notes">Slide notes</Href> to <em>reverse a slide direction</em> based on each note rule.
+                    <Block color="#8c6f5e">MIDI CHANNEL 12</Block>: Used on <Href href="/slide-notes">Slide Markers</Href> to <em>reverse a slide direction</em> based on each note rule.
                 </Options>
                 <Options>
-                    <Block color="#758c5e">MIDI CHANNEL 13</Block>: Used on <Href href="/hopo">HO/PO markers</Href> to <em>force off</em> HO/PO notes.
+                    <Block color="#758c5e">MIDI CHANNEL 13</Block>: Used on <Href href="/hopo">HO/PO Markers</Href> to <em>force off</em> HO/PO notes.
                 </Options>
                 <Options>
-                    <Block color="#5e8c7b">MIDI CHANNEL 14</Block>: Used on <Href href="/string-emphasis-strumming-pattern">String Emphasis / Strumming Pattern marker</Href> to <em>emphasize the playing of higher strings on a chord</em> (as string emphasis), or to <em>tell the player the strumming direction is upward</em> (as strumming pattern).
+                    <Block color="#5e8c7b">MIDI CHANNEL 14</Block>: Used on <Href href="/strumming-patterns">Strumming Pattern marker</Href> to <em>emphasize the playing of higher strings on a chord</em> (as string emphasis), or to <em>tell the player the strumming direction is upward</em> (as strumming pattern).
                 </Options>
                 <Options>
-                    <Block color="#5e698c">MIDI CHANNEL 15</Block>: Used on <Href href="/string-emphasis-strumming-pattern">String Emphasis / Strumming Pattern marker</Href> to <em>emphasize the playing of middle strings on a chord</em> (as string emphasis).
+                    <Block color="#5e698c">MIDI CHANNEL 15</Block>: Used on <Href href="/strumming-patterns">Strumming Pattern marker</Href> to <em>emphasize the playing of middle strings on a chord</em> (as string emphasis).
                 </Options>
                 <Options>
-                    <Block color="#875e8c">MIDI CHANNEL 16</Block>: Used on <Href href="/string-emphasis-strumming-pattern">String Emphasis / Strumming Pattern marker</Href> to <em>emphasize the playing of lower strings on a chord</em> (as string emphasis), or to <em>tell the player the strumming direction is downward</em> (as strumming pattern).
+                    <Block color="#875e8c">MIDI CHANNEL 16</Block>: Used on <Href href="/strumming-patterns">Strumming Pattern marker</Href> to <em>emphasize the playing of lower strings on a chord</em> (as string emphasis), or to <em>tell the player the strumming direction is downward</em> (as strumming pattern).
                 </Options>
             </ul>
         </MainComponent>

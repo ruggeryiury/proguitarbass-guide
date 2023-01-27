@@ -8,9 +8,9 @@ const PageAnchorsProvider = (page?: string): AnchorsLinkDocument[] => {
             return [{ title: "Strings", id: "strings" }, { title: "Frets", id: "frets" }]
 
         } else if (page === 'chords') {
-            return [{ title: "Root Note Indicators", id: "rootNoteIndicators" }, { title: "Slash Chords", id: "slashChords" }, { title: "Omitting Muted Strings from Chords", id: "omittingMutedStringsfromChords" }, { title: "Hide Chord Name", id: "hideChordName" }]
+            return [{ title: "Root Note Indicators", id: "rootNoteIndicators" }, { title: "Slash Chords", id: "slashChords" }, { title: "Omitting Muted Strings from Chords", id: "omittingMutedStringsfromChords" }, { title: "Hide Chord Name", id: "hideChordName" }, {title: "Sharp/Flat Swap", id: "sharpFlatSwap"}]
 
-        } else if (page === 'slide-notes') {
+        } else if (page === 'slide') {
             return [{ title: "Slide Direction Rules", id: "slideDirectionRules" }, { title: "The Fret Rule", id: "theFretRule" }, { title: "The 1/16 Note Gap Rule", id: "the1_16NoteGapRule" }, { title: "Behavior with Chords", id: "behaviorWithChords" }]
 
         } else if (page === 'note-encodings') {

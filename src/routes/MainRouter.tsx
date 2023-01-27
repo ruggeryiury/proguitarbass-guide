@@ -1,9 +1,8 @@
 import { Routes, Route } from "react-router-dom"
 import Header from "../components/Header/Header"
 import IndexPage from "../pages/main/IndexPage"
-import { Notes, Chords } from "../pages/main/Basics.pages"
-import { MutedNotes, SlideNotes } from "../pages/main/NotesPages"
-import { Arpeggio, HOPO, StringEmphasis } from "../pages/main/Markers.pages"
+import { Notes, Chords, MutedNotesAndChords } from "../pages/main/Basics.pages"
+import { Arpeggio, ForceChordNumbering, HOPO, Slide, StrummingPatterns } from "../pages/main/Markers.pages"
 import { CustomChordNames, FretHandPosition, NoteEncondings, OverdriveSoloBRE, TrainerSections } from "../pages/main/Events.pages"
 import ErrorPage from "../pages/ErrorPage"
 import { CommonMAGMAErrors, Reductions, Tunings } from "../pages/main/Mastering.pages"
@@ -19,15 +18,14 @@ const MainRouter = () => {
                 (Basics)
                 <Route path='/notes' element={<Notes />} />
                 <Route path='/chords' element={<Chords />} />
-
-                (Notes)
-                <Route path='/muted-notes' element={<MutedNotes />} />
-                <Route path='/slide-notes' element={<SlideNotes />} />
+                <Route path='/muted-notes-and-chords' element={<MutedNotesAndChords />} />
 
                 (Markers)
                 <Route path='/hopo' element={<HOPO />} />
+                <Route path='/slide' element={<Slide />} />
                 <Route path='/arpeggio' element={<Arpeggio />} />
-                <Route path='/string-emphasis' element={<StringEmphasis />} />
+                <Route path='/strumming-pattern' element={<StrummingPatterns />} />
+                <Route path='/force-chord-numbering' element={<ForceChordNumbering />} />
 
                 (Events)
                 <Route path='/fret-hand-position' element={<FretHandPosition />} />

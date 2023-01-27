@@ -1,8 +1,13 @@
 {
   "name": "proguitarbass-guide",
   "version": "0.1.0",
-  "description": "",
-  "keywords": [],
+  "description": "React App version of my famous PRO Guitar/Bass guide for Rock Band 3 Customs.",
+  "keywords": [
+    "typescript",
+    "pwa",
+    "guide",
+    "rockband3"
+  ],
   "private": true,
   "homepage": "https://ruggeryiury.github.io/proguitarbass-guide",
   "dependencies": {
@@ -29,6 +34,8 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

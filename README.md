@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://github.com/ruggeryiury/proguitarbass-guide/blob/master/src/assets/vectors/banner.webp?raw=true" alt="React App version of my famous PRO Guitar/Bass guide for Rock Band 3 Customs."/>
+  <img src="https://github.com/ruggeryiury/proguitarbass-guide/blob/master/header.webp?raw=true" alt="React App version of my famous PRO Guitar/Bass guide for Rock Band 3 Customs."/>
 </p>
 
-Originally released as a *.PDF book*, then as a raw, yet stylish Tumblr page, my *PRO Guitar/Bass Guide* were written during my experiments with **Rock Band 3's** *PRO Guitar/Bass* authoring, discovering and testing brand new features with a big help from big *PRO Guitar/Bass* mode players (like [PinkyMilo]()).
+Originally released as a *.PDF book*, then as a raw, yet stylish Tumblr page, my *PRO Guitar/Bass Guide* were written during my experiments with **Rock Band 3's** *PRO Guitar/Bass* authoring, discovering and testing brand new features with a big help from big *PRO Guitar/Bass* mode players (like [PinkyMilo](https://www.youtube.com/channel/UC9ZgGgo3LbmXcA03whiLZJg)).
 
 I've stuctured my guide to be as most intuitive as possible, with every step explained, with videos with self-recorded guitar lines and MIDI samples, which can be downloaded and loaded on REAPER by just dragging with MIDI file into it.
 
@@ -14,7 +14,7 @@ I've stuctured my guide to be as most intuitive as possible, with every step exp
 ## 🚀 Features
 - **Fully Responsive:** This web app was created under the *mobile-first*  concept. Responsive web design is a web design method that enables web to fit the screens of different devices automatically, displaying the content in a way that people feel comfortable. This greatly reduces users’ operations like panning, zooming and scrolling when browsing the web. *Mobile first*, as the name suggests, means that I started the product design from the mobile end which has more restrictions, then expand its features to create a tablet or desktop version.
 
-- **Works as Progressive Web Apps:** Progressive Web Apps (PWAs) are web apps that use service workers, manifests, and other web-platform features in combination with progressive enhancement to give users an experience on par with native apps. PWAs provide a number of advantages to users — including being installable, progressively enhanced, responsively designed, re-engageable, linkable, discoverable, network independent, and secure.
+- **Works as a Progressive Web App:** Progressive Web Apps (PWAs) are web apps that use service workers, manifests, and other web-platform features in combination with progressive enhancement to give users an experience on par with native apps. PWAs provide a number of advantages to users — including being installable, progressively enhanced, responsively designed, re-engageable, linkable, discoverable, network independent, and secure.
 
 ## ⚙️ Technologies
 - [React App](https://create-react-app.dev/), using [TypeScript](https://www.typescriptlang.org/) template.

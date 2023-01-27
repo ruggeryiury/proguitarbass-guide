@@ -50,19 +50,16 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ activated, action }) => {
                 <div>
                     <Link to="/notes" onClick={ev => CloseHeaderMenu()}>NOTES</Link>
                     <Link to="/chords" onClick={ev => CloseHeaderMenu()}>CHORDS</Link>
-                </div>
-
-                <h2>NOTES</h2>
-                <div>
-                    <Link to='/muted-notes-and-chords' onClick={ev => CloseHeaderMenu()}>MUTED NOTES AND CHORDS</Link>
-                    <Link to='/slide-notes' onClick={ev => CloseHeaderMenu()}>SLIDE NOTES</Link>
+                    <Link to='/muted-notes-and-chords' onClick={ev => CloseHeaderMenu()}>MUTED NOTES & CHORDS</Link>
                 </div>
 
                 <h2>MARKERS</h2>
                 <div>
-                    <Link to='/hopo' onClick={ev => CloseHeaderMenu()}>HO/POs</Link>
-                    <Link to='/arpeggios' onClick={ev => CloseHeaderMenu()}>ARPEGGIOS</Link>
-                    <Link to='/string-emphasis' onClick={ev => CloseHeaderMenu()}>STRING EMPHASIS</Link>
+                    <Link to='/hopo' onClick={ev => CloseHeaderMenu()}>HO/PO MARKRE</Link>
+                    <Link to='/slide-notes' onClick={ev => CloseHeaderMenu()}>SLIDE MARKER</Link>
+                    <Link to='/arpeggio' onClick={ev => CloseHeaderMenu()}>ARPEGGIO MARKER</Link>
+                    <Link to='/strumming-pattern' onClick={ev => CloseHeaderMenu()}>STRUMMING PATTERN MARKER</Link>
+                    <Link to='/force-chord-numbering' onClick={ev => CloseHeaderMenu()}>FORCE CHORD NUMBERING</Link>
                 </div>
                 <h2>EVENTS</h2>
                 <div>

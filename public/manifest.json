@@ -4,8 +4,7 @@
 	"theme_color": "#000000",
 	"background_color": "#000000",
 	"display": "standalone",
-	"scope": "/",
-	"start_url": "/",
+	"start_url": "/proguitarbass-guide/",
 	"icons": [
 		{
 			"src": "maskable.png",

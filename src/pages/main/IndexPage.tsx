@@ -9,18 +9,22 @@ const IndexPage = () => {
             <MainTextParagraph>This guide will help you creating PRO Guitar/Bass parts for your customs, with every single PRO mode features explained.<br /><br />Here are some things you should consider before authoring PRO Guitar/Bass parts:</MainTextParagraph>
             <ul>
                 <MainTextList title="Playability VS. Accuracy">All PRO Guitar/Bass charts must follow their 5-lane charts, but certain dynamics and articulations are way easier to portrait on 5-lane charts. Sometimes, you'll chart different guitar sections and realize there's a big fret jumping between one charted section to the other, Then this happens, feel free to underchart, and even take a 4th note space away from the chart to let the player position its hand to keep playing the song. Songs were meant to be playable and this rule applies to everything. If you're in doubt of what to do, ask to any PRO Guitar/Bass player for opinions about how's the best approach for your song.</MainTextList>
-                <MainTextList title="Basic music theory knowlegde">Just like PRO Keys parts, music theory plays a big role while charting PRO Guitar/Bass parts, so it's inevitable.</MainTextList>
+                <MainTextList title="Basic music theory knowlegde">Just like PRO Keys parts, music theory plays a big role while charting PRO Guitar/Bass parts, so it's inevitable for you to understand basic concepts of playing guitar/bass to make PRO Guitar/Bass parts for your custom.</MainTextList>
             </ul>
 
             <MainTextTitle id='authoringTools'>Authoring Tools</MainTextTitle>
             <ul>
                 <MainTextLink to='https://rhythmgamingworld.com/forums/topic/pro-guitar-preview-for-reaper-v10/' title='PRO Guitar Preview Plugin for REAPER'>A REAPER JSFX plugin created by C3 user <em>Seil</em> that translates PRO Guitar/Bass notes to actual MIDI notes, so you can use any VST plugin (like REAPER's <em>ReaSynth</em>) to hear the notes you're charting.</MainTextLink>
+                <MainTextLink to='/proguitarbass-guide/static/REAPERNoteNames.zip' title='PRO Guitar/Bass note names for REAPER'>Including two text files for you to use on your PRO Guitar/Bass tracks on REAPER, one has note names for all difficulties and the other has just for Expert difficulty.</MainTextLink>
                 <MainTextLink to='https://code.google.com/archive/p/ziggy-pro-editor/' title="Ziggy's PRO Editor">Since CAT can't do automatic PRO Guitar/Bass reductions, <em>Ziggy's PRO Editor</em> might be handy tool for you to auto-generate EMH difficulties in a flash! You can find a tutorial to generate reductions on the <MainTextHref href='/reductions'>Reductions</MainTextHref> page.</MainTextLink>
             </ul>
 
             <MainTextTitle id='preparingYourReaperProject'>Preparing Your Reaper Project</MainTextTitle>
             <ul>
-                <MainTextList title='Install PRO Guitar Preview, and the PRO Guitar/Bass note names'></MainTextList>
+                <MainTextList title='Install PRO Guitar Preview, and the PRO Guitar/Bass note names'>
+                    The <em>PRO Guitar/Bass Preview plugin</em> must be placed anywhere inside <em className='text-cyan-500'>C:\Users\YOURUSERNAME\AppData\Roaming\REAPER\Effects</em>, and the note names text files must be placed where you have all the other note names text files that is installed using the RBN2 Authoring Tools.
+
+                </MainTextList>
                 <MainTextList title="Create PRO Guitar/Bass tracks">
                     Start by adding two new tracks on your REAPER project:
                     <br /><br />

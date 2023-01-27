@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom"
 import MainComponent from "../../components/Main/MainComponent"
-import { MainTextParagraph as Paragraph, MainTextTitle as Title, MainTextOptions as Options, MainTextBlock as Block } from "../../components/Main/MainText.components"
+import { MainTextParagraph as Paragraph, MainTextTitle as Title, MainTextOptions as Options, MainTextBlock as Block, MainTextHref as Href } from "../../components/Main/MainText.components"
 import PageAnchorsProvider from "../../services/configs/PageAnchorsProvider"
 
 export const Notes = () => {
@@ -61,6 +62,83 @@ export const Chords = () => {
             <Title id='hideChordName'>Hide Chord Name</Title>
             <Paragraph>
                 The <strong className="text-cyan-500">HIDE CHORD NAME MARKER</strong> <Block>F-1</Block> (17) is handy when you deal with chords that don't consistently belong to any scale, or don't have any big importance on naming it, like two-string oblique bends. To hide chord names, place a <strong className="text-cyan-500">HIDE CHORD NAME MARKER</strong> encopassing any root note indicator you want its name not to be displayed in-game. After any hide chord name marker, the game will search chord names based on the last root note indicator placed (even if placed within the marker), unless you put another root note indicator aligned with any first chord after the marker.
+            </Paragraph>
+
+            <Title id='sharpFlatSwap'>Sharp/Flat Swap</Title>
+            <Paragraph>
+                The <strong className="text-cyan-500">SHARP/FLAT SWAP MARKER</strong> <Block>F♯-1</Block> (18) is used to change the accident symbols used on chords. The default accident symbol used on chords is based on the song's key signature and tonality (that is defined on the song's .dta file) and it follows the <a href='https://en.wikipedia.org/wiki/Circle_of_fifths' target="_blank" rel="noreferrer" className='tracking-tight inline-flex text-cyan-500 hover:underline'>circle of fifths</a> theory, but when song key changes in the middle of the song, the <strong className="text-cyan-500">SHARP/FLAT SWAP MARKER</strong> should be used to fit the symbol used on that specific key.
+                <br /><br />
+                The most notable example is on the Rock Band 3 on-disc song <em className="text-cyan-500">Foolin'</em>, by Def Leppard. The song key starts on A minor (which uses the sharp symbol as default), but on the pre-chorus/chorus, the song key changes to D minor (which uses the flat symbol), so the <strong className="text-cyan-500">SHARP/FLAT SWAP MARKER</strong> is used on the <Block>B♭5</Block> chord, otherwise it would be shown as <Block>A♯5</Block>.
+                <br /><br />
+                Here is a table with all symbols used on all key signatures:
+            </Paragraph>
+            <table>
+                <tr>
+                    <th>KEY SIGNATURES</th>
+                    <th>SYMBOL USED</th>
+                </tr>
+                <tr>
+                    <td>C / Am</td>
+                    <td>SHARP (♯)</td>
+                </tr>
+                <tr>
+                    <td>D♭ / B♭m</td>
+                    <td>FLAT (♭)</td>
+                </tr>
+                <tr>
+                    <td>D / Bm</td>
+                    <td>SHARP (♯)</td>
+                </tr>
+                <tr>
+                    <td>E♭ / Cm</td>
+                    <td>FLAT (♭)</td>
+                </tr>
+                <tr>
+                    <td>E / C♯m</td>
+                    <td>SHARP (♯)</td>
+                </tr>
+                <tr>
+                    <td>F / Dm</td>
+                    <td>FLAT (♭)</td>
+                </tr>
+                <tr>
+                    <td>F♯ / D♯m</td>
+                    <td>SHARP (♯)</td>
+                </tr>
+                <tr>
+                    <td>G / Em</td>
+                    <td>SHARP (♯)</td>
+                </tr>
+                <tr>
+                    <td>A♭ / Fm</td>
+                    <td>FLAT (♭)</td>
+                </tr>
+                <tr>
+                    <td>A / F♯m</td>
+                    <td>SHARP (♯)</td>
+                </tr>
+                <tr>
+                    <td>B♭ / Gm</td>
+                    <td>FLAT (♭)</td>
+                </tr>
+                <tr>
+                    <td>B / G♯m</td>
+                    <td>SHARP (♯)</td>
+                </tr>
+            </table>
+        </MainComponent>
+    )
+}
+
+export const MutedNotesAndChords = () => {
+    return (
+        <MainComponent title="Muted Notes and Chords" anchors={PageAnchorsProvider('muted-notes-and-chords')}>
+            <Paragraph>
+                Most PRO Guitar/Bass functions are encoded using markers and/or channel encodings. To author muted notes/chords, you must encode the note/chord notes on <Block color="#00578c">MIDI CHANNEL 4</Block>. Muted notes and chords are displayed in-game as blue shapes withour fret numbering.
+                <br /><br />
+                Muted notes and chords behave as normal notes/chords on basically all functions, such as <Href href='/fret-hand-position'>Fret Hand Positions</Href> and <Href href='/slide-notes'>Slide Notes</Href> rules.
+                <br /><br />
+                Palm muted notes and chords with sonical distinction between frets must be authored as normal notes.
             </Paragraph>
         </MainComponent>
     )
