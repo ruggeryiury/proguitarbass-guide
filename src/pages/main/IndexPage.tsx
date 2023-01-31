@@ -22,7 +22,7 @@ const IndexPage = () => {
             <MainTextTitle id='preparingYourReaperProject'>Preparing Your Reaper Project</MainTextTitle>
             <ul>
                 <MainTextList title='Install PRO Guitar Preview, and the PRO Guitar/Bass note names'>
-                    The <em>PRO Guitar/Bass Preview plugin</em> must be placed anywhere inside <em className='text-cyan-500'>C:\Users\YOURUSERNAME\AppData\Roaming\REAPER\Effects</em>, and the note names text files must be placed where you have all the other note names text files that is installed using the RBN2 Authoring Tools.
+                    The <em>PRO Guitar/Bass Preview plugin</em> must be placed anywhere inside <em className='text-cyan-500 break-words'>AppData\Roaming\REAPER\Effects</em>, and the note names text files must be placed where you have all the other note names text files that is installed using the RBN2 Authoring Tools.
 
                 </MainTextList>
                 <MainTextList title="Create PRO Guitar/Bass tracks">

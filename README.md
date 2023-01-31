@@ -29,8 +29,10 @@ I've stuctured my guide to be as most intuitive as possible, with every step exp
     - *Install with NPM:*  `npm i react-icons`
 - [Sass](https://www.npmjs.com/package/sass): A pure JavaScript implementation of Sass.
     - *Install with NPM:*  `npm i sass`
-- [Animate.css](): Just-add-water CSS animations.
+- [Animate.css](https://animate.style/): Just-add-water CSS animations.
     - *Install with NPM:*  `npm i animate.css`
+- [React Intersection Observer](https://www.npmjs.com/package/react-intersection-observer): React implementation of the Intersection Observer API to tell you when an element enters or leaves the viewport.
+    - *Install with NPM:*  `npm i react-intersection-observer`
 - [Github Pages](https://www.npmjs.com/package/gh-pages): Publish to a gh-pages branch on GitHub (or any other branch on any other remote).
     - *Install with NPM:*  `npm i -D gh-pages`
 - [React HTML5 Video](https://www.npmjs.com/package/react-html5video): A customizeable HoC (Higher Order Component) for HTML5 Video that allows custom and configurable controls.

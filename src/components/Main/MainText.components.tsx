@@ -31,11 +31,11 @@ export const MainTextOptions: React.FC<React.PropsWithChildren> = ({ children })
 export const MainTextHref: React.FC<React.PropsWithChildren<MainTextHrefProps>> = ({ children, href }) => {
     if (href.startsWith("http")) {
         return (
-            <a href={href} target="_blank" rel="noreferrer" className='inline-flex text-cyan-500 hover:underline'>{children}</a>
+            <a href={href} target="_blank" rel="noreferrer" className='inline text-cyan-500 hover:underline'>{children}</a>
         )
     } else if (href.startsWith("/")) {
         return (
-            <Link to={href} className='inline-flex text-cyan-500 hover:underline'>{children}</Link>
+            <Link to={href} className='inline text-cyan-500 hover:underline'>{children}</Link>
         )
     } else {
         return null
@@ -44,7 +44,8 @@ export const MainTextHref: React.FC<React.PropsWithChildren<MainTextHrefProps>> 
 
 export const MainTextLink: React.FC<React.PropsWithChildren<MainTextLinkProps>> = ({ children, to, title }) => {
     return <li className='list-inside list-disc'>
-        <span className="relative -ml-2 z-[-1]"></span>
-        <a href={to} target="_blank" rel="noreferrer" className='tracking-tight inline-flex font-bold text-cyan-500 hover:underline'>{title}</a>: {children}
+        <span className="relative -ml-2 z-[-1]">
+            <a href={to} target="_blank" rel="noreferrer" className='tracking-tight inline font-bold text-cyan-500 hover:underline'>{title}</a>: {children}
+        </span>
     </li>
 }

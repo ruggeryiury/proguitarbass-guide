@@ -13,12 +13,12 @@ export const HOPO = () => {
                 You can change HO/PO Threshold settings on MAGMA when you compile your song, but remember that the HO/PO Threshold will also change HO/PO behavior for other play modes as well (5-lane guitar, bass, and keys). In the end, it's up to you to know the best setting for your song.
                 <br /><br />
                 There are three possible articulations of HO/PO notes:
-                <ul>
-                    <List title="Based on the HO/PO Threshold">Notes are automatically displayed as HO/PO if they are 1/16th note (or closer) of each other.</List>
-                    <List title="Forcing HO/PO Notes On">You can force notes to be HO/PO notes by using the <strong className="text-cyan-500">HO/PO MARKER</strong> <Block>F♯6</Block> (102) (for Expert difficulty). Like on 5-lane guitar/bass/keys, you can force HO/PO on with multiple notes in a row as well, just place a marker encopassing all the notes you want to be displayed as HO/PO.</List>
-                    <List title="Forcing HO/PO Notes Off">You can force notes NOT to be HO/PO notes by using the <strong className="text-cyan-500">HO/PO MARKER</strong> <Block>F♯6</Block> (102) (for Expert difficulty) encoded on <Block color="#758c5e">MIDI CHANNEL 13</Block>. Forcing HO/PO off is useful for songs with slow BPMs (100BPM or lower), since 1/16th note sequences aren't fast enough to avoid strumming. On songs with higher BPMs, it must be used sparingly and with conscience, since it can make the song unfairly harder to play.</List>
-                </ul>
             </Paragraph>
+            <ul>
+                <List title="Based on the HO/PO Threshold">Notes are automatically displayed as HO/PO if they are 1/16th note (or closer) of each other.</List>
+                <List title="Forcing HO/PO Notes On">You can force notes to be HO/PO notes by using the <strong className="text-cyan-500">HO/PO MARKER</strong> <Block>F♯6</Block> (102) (for Expert difficulty). Like on 5-lane guitar/bass/keys, you can force HO/PO on with multiple notes in a row as well, just place a marker encopassing all the notes you want to be displayed as HO/PO.</List>
+                <List title="Forcing HO/PO Notes Off">You can force notes NOT to be HO/PO notes by using the <strong className="text-cyan-500">HO/PO MARKER</strong> <Block>F♯6</Block> (102) (for Expert difficulty) encoded on <Block color="#758c5e">MIDI CHANNEL 13</Block>. Forcing HO/PO off is useful for songs with slow BPMs (100BPM or lower), since 1/16th note sequences aren't fast enough to avoid strumming. On songs with higher BPMs, it must be used sparingly and with conscience, since it can make the song unfairly harder to play.</List>
+            </ul>
         </MainComponent>
     )
 }
@@ -35,11 +35,14 @@ export const Slide = () => {
                 <em>Old tutorials believed that slide directions was based on the <strong className="text-cyan-500">SLIDE MARKER</strong> velocity, but they couldn't explain why some notes didn't respect that rule, with the slide going to the opposite direction that is was intended to go.</em>
                 <br /><br />
                 Actually, <strong className="text-cyan-500">SLIDE MARKERS</strong> directions have two rules they can follow:
-                <br />
-                <ul>
-                    <Options>The <span className="text-cyan-500">FRET</span> rule, by default.</Options>
-                    <Options>The <span className="text-cyan-500">1/16 NOTE GAP</span> rule.</Options>
-                </ul>
+            </Paragraph>
+
+            <ul>
+                <Options>The <span className="text-cyan-500">FRET</span> rule, by default.</Options>
+                <Options>The <span className="text-cyan-500">1/16 NOTE GAP</span> rule.</Options>
+            </ul>
+            
+            <Paragraph>
                 If you want to reverse the slide direction under any of this conditions, you must encode the <strong className="text-cyan-500">SLIDE MARKER</strong> on <Block color="#8c6f5e">MIDI CHANNEL 12</Block>.
                 <br /><br />
                 You can also encopass multiple notes/chords within one <strong className="text-cyan-500">SLIDE MARKER</strong> just like on <Href href="/hopo">HO/POs</Href>, but every note/chord will follow the rules according to each specific situation.
@@ -110,4 +113,8 @@ export const ForceChordNumbering = () => {
             </Paragraph>
         </MainComponent>
     )
+}
+
+export const TrillTremolo = () => {
+    return null
 }

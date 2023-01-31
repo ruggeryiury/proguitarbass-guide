@@ -147,7 +147,9 @@ export const TrainerSections = () => {
 export const CustomChordNames = () => {
     return (
         <MainComponent title="Custom Chord Names" anchors={PageAnchorsProvider('custom-chord-names')}>
-
+            {/* <Paragraph>
+                You can place custom chord names on any chord with 
+            </Paragraph> */}
         </MainComponent>
     )
 }

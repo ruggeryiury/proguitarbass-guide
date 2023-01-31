@@ -73,58 +73,62 @@ export const Chords = () => {
                 Here is a table with all symbols used on all key signatures:
             </Paragraph>
             <table>
-                <tr>
-                    <th>KEY SIGNATURES</th>
-                    <th>SYMBOL USED</th>
-                </tr>
-                <tr>
-                    <td>C / Am</td>
-                    <td>SHARP (♯)</td>
-                </tr>
-                <tr>
-                    <td>D♭ / B♭m</td>
-                    <td>FLAT (♭)</td>
-                </tr>
-                <tr>
-                    <td>D / Bm</td>
-                    <td>SHARP (♯)</td>
-                </tr>
-                <tr>
-                    <td>E♭ / Cm</td>
-                    <td>FLAT (♭)</td>
-                </tr>
-                <tr>
-                    <td>E / C♯m</td>
-                    <td>SHARP (♯)</td>
-                </tr>
-                <tr>
-                    <td>F / Dm</td>
-                    <td>FLAT (♭)</td>
-                </tr>
-                <tr>
-                    <td>F♯ / D♯m</td>
-                    <td>SHARP (♯)</td>
-                </tr>
-                <tr>
-                    <td>G / Em</td>
-                    <td>SHARP (♯)</td>
-                </tr>
-                <tr>
-                    <td>A♭ / Fm</td>
-                    <td>FLAT (♭)</td>
-                </tr>
-                <tr>
-                    <td>A / F♯m</td>
-                    <td>SHARP (♯)</td>
-                </tr>
-                <tr>
-                    <td>B♭ / Gm</td>
-                    <td>FLAT (♭)</td>
-                </tr>
-                <tr>
-                    <td>B / G♯m</td>
-                    <td>SHARP (♯)</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>KEY SIGNATURES</th>
+                        <th>SYMBOL USED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C / Am</td>
+                        <td>SHARP (♯)</td>
+                    </tr>
+                    <tr>
+                        <td>D♭ / B♭m</td>
+                        <td>FLAT (♭)</td>
+                    </tr>
+                    <tr>
+                        <td>D / Bm</td>
+                        <td>SHARP (♯)</td>
+                    </tr>
+                    <tr>
+                        <td>E♭ / Cm</td>
+                        <td>FLAT (♭)</td>
+                    </tr>
+                    <tr>
+                        <td>E / C♯m</td>
+                        <td>SHARP (♯)</td>
+                    </tr>
+                    <tr>
+                        <td>F / Dm</td>
+                        <td>FLAT (♭)</td>
+                    </tr>
+                    <tr>
+                        <td>F♯ / D♯m</td>
+                        <td>SHARP (♯)</td>
+                    </tr>
+                    <tr>
+                        <td>G / Em</td>
+                        <td>SHARP (♯)</td>
+                    </tr>
+                    <tr>
+                        <td>A♭ / Fm</td>
+                        <td>FLAT (♭)</td>
+                    </tr>
+                    <tr>
+                        <td>A / F♯m</td>
+                        <td>SHARP (♯)</td>
+                    </tr>
+                    <tr>
+                        <td>B♭ / Gm</td>
+                        <td>FLAT (♭)</td>
+                    </tr>
+                    <tr>
+                        <td>B / G♯m</td>
+                        <td>SHARP (♯)</td>
+                    </tr>
+                </tbody>
             </table>
         </MainComponent>
     )

@@ -55,8 +55,8 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ activated, action }) => {
 
                 <h2>MARKERS</h2>
                 <div>
-                    <Link to='/hopo' onClick={ev => CloseHeaderMenu()}>HO/PO MARKRE</Link>
-                    <Link to='/slide-notes' onClick={ev => CloseHeaderMenu()}>SLIDE MARKER</Link>
+                    <Link to='/hopo' onClick={ev => CloseHeaderMenu()}>HO/PO MARKER</Link>
+                    <Link to='/slide' onClick={ev => CloseHeaderMenu()}>SLIDE MARKER</Link>
                     <Link to='/arpeggio' onClick={ev => CloseHeaderMenu()}>ARPEGGIO MARKER</Link>
                     <Link to='/strumming-pattern' onClick={ev => CloseHeaderMenu()}>STRUMMING PATTERN MARKER</Link>
                     <Link to='/force-chord-numbering' onClick={ev => CloseHeaderMenu()}>FORCE CHORD NUMBERING</Link>
