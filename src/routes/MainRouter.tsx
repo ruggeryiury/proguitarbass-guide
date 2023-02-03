@@ -1,43 +1,40 @@
 import { Routes, Route } from "react-router-dom"
 import Header from "../components/Header/Header"
-import IndexPage from "../pages/main/IndexPage"
-import { Notes, Chords, MutedNotesAndChords } from "../pages/main/Basics.pages"
-import { Arpeggio, ForceChordNumbering, HOPO, Slide, StrummingPatterns } from "../pages/main/Markers.pages"
-import { CustomChordNames, FretHandPosition, NoteEncondings, OverdriveSoloBRE, TrainerSections } from "../pages/main/Events.pages"
 import ErrorPage from "../pages/ErrorPage"
-import { CommonMAGMAErrors, Reductions, Tunings } from "../pages/main/Mastering.pages"
+import * as Topics from '../pages/Topics'
 
 const MainRouter = () => {
+    
     return (
         <>
             <Header />
             <Routes>
                 (Index Page)
-                <Route index element={<IndexPage />} />
+                <Route index element={<Topics.Index />} />
 
                 (Basics)
-                <Route path='/notes' element={<Notes />} />
-                <Route path='/chords' element={<Chords />} />
-                <Route path='/muted-notes-and-chords' element={<MutedNotesAndChords />} />
+                <Route path='/notes' element={<Topics.Notes />} />
+                <Route path='/chords' element={<Topics.Chords />} />
+                <Route path='/muted-notes-and-chords' element={<Topics.MutedNotesAndChords />} />
 
                 (Markers)
-                <Route path='/hopo' element={<HOPO />} />
-                <Route path='/slide' element={<Slide />} />
-                <Route path='/arpeggio' element={<Arpeggio />} />
-                <Route path='/strumming-pattern' element={<StrummingPatterns />} />
-                <Route path='/force-chord-numbering' element={<ForceChordNumbering />} />
+                <Route path='/hopo' element={<Topics.HOPO />} />
+                <Route path='/slide' element={<Topics.Slide />} />
+                <Route path='/arpeggio' element={<Topics.Arpeggio />} />
+                <Route path='/strumming-pattern' element={<Topics.StrummingPatterns />} />
+                <Route path='/force-chord-numbering' element={<Topics.ForceChordNumbering />} />
 
                 (Events)
-                <Route path='/fret-hand-position' element={<FretHandPosition />} />
-                <Route path='/note-encodings' element={<NoteEncondings />} />
-                <Route path='/overdrive-solo-bre' element={<OverdriveSoloBRE />} />
-                <Route path='/trainer-sections' element={<TrainerSections />} />
-                <Route path='/custom-chord-names' element={<CustomChordNames />} />
+                <Route path='/left-hand-position' element={<Topics.LeftHandPosition />} />
+                <Route path='/note-encodings' element={<Topics.NoteEncondings />} />
+                <Route path='/overdrive-solo-bre' element={<Topics.OverdriveSoloBRE />} />
+                <Route path='/trainer-sections' element={<Topics.TrainerSections />} />
+                <Route path='/custom-chord-names' element={<Topics.CustomChordNames />} />
 
                 (Mastering)
-                <Route path='/tunings' element={<Tunings />} />
-                <Route path='/reductions' element={<Reductions />} />
-                <Route path='/common-magma-errors' element={<CommonMAGMAErrors />} />
+                <Route path='/tunings' element={<Topics.Tunings />} />
+                <Route path='/reductions' element={<Topics.Reductions />} />
+                <Route path='/common-magma-errors' element={<Topics.CommonMAGMAErrors />} />
 
                 (Error Page)
                 <Route path='/*' element={<ErrorPage />} />

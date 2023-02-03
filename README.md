@@ -9,12 +9,11 @@ I've stuctured my guide to be as most intuitive as possible, with every step exp
 # 💠  Table of Contents
 - [Features](#-features)
 - [Technologies](#%EF%B8%8F-technologies)
-- [Changelog](#-changelog)
 
 ## 🚀 Features
 - **Fully Responsive:** This web app was created under the *mobile-first*  concept. Responsive web design is a web design method that enables web to fit the screens of different devices automatically, displaying the content in a way that people feel comfortable. This greatly reduces users’ operations like panning, zooming and scrolling when browsing the web. *Mobile first*, as the name suggests, means that I started the product design from the mobile end which has more restrictions, then expand its features to create a tablet or desktop version.
 
-- **Works as a Progressive Web App:** Progressive Web Apps (PWAs) are web apps that use service workers, manifests, and other web-platform features in combination with progressive enhancement to give users an experience on par with native apps. PWAs provide a number of advantages to users — including being installable, progressively enhanced, responsively designed, re-engageable, linkable, discoverable, network independent, and secure.
+- `IN PROGRESS` **Works as a Progressive Web App:** Progressive Web Apps (PWAs) are web apps that use service workers, manifests, and other web-platform features in combination with progressive enhancement to give users an experience on par with native apps. PWAs provide a number of advantages to users — including being installable, progressively enhanced, responsively designed, re-engageable, linkable, discoverable, network independent, and secure.
 
 ## ⚙️ Technologies
 - [React App](https://create-react-app.dev/), using [TypeScript](https://www.typescriptlang.org/) template.
@@ -35,9 +34,3 @@ I've stuctured my guide to be as most intuitive as possible, with every step exp
     - *Install with NPM:*  `npm i react-intersection-observer`
 - [Github Pages](https://www.npmjs.com/package/gh-pages): Publish to a gh-pages branch on GitHub (or any other branch on any other remote).
     - *Install with NPM:*  `npm i -D gh-pages`
-- [React HTML5 Video](https://www.npmjs.com/package/react-html5video): A customizeable HoC (Higher Order Component) for HTML5 Video that allows custom and configurable controls.
-
-## 🔄 Changelog
-- See the [Changelog](https://github.com/ruggeryiury/proguitarbass-guide/blob/master/CHANGELOG.md).
-	- *Current version: 0.1.0*
-	- *Deployed version: 0.1.0*

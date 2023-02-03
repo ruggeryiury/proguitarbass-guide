@@ -1,23 +1,12 @@
 import { useContext, useEffect } from "react"
 import { HashRouter as Router, Routes, Route } from "react-router-dom"
-import { AppContext } from "../contexts/AppProvider"
-import CheckLocalStorage from "../services/configs/CheckLocalStorage"
-import LangParser from "../services/utils/LangParser"
-import MainRouter from "./MainRouter"
+import { AppContext } from "./AppProvider"
+import MainRouter from "../routes/MainRouter"
 
 const AppRouter = () => {
     const Context = useContext(AppContext)
 
     useEffect(() => {
-        const savedLanguage = CheckLocalStorage()
-
-        if (savedLanguage) {
-            Context.setLang(savedLanguage)
-        } else {
-            const language = LangParser(navigator.language)
-            
-            Context.setLang(language)
-        }
     }, [Context.lang])
     return (
         <Router>

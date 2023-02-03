@@ -61,7 +61,7 @@ a {
 }
 p,
 li {
-    @apply pl-2 pr-4 font-text text-left text-lg tracking-tight cursor-text mb-4;
+    @apply pl-2 pr-4 font-text text-left text-lg tracking-tight cursor-text mb-4 last:mb-0;
 }
 table, th, td {
     @apply border-b border-main-white/50 text-left p-2;

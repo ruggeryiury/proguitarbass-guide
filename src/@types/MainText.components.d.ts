@@ -2,8 +2,9 @@ interface MainTextTitleProps {
     id: string
 }
 interface MainTextBlockProps {
-    color?: string
-    invertTextColor?: boolean
+    text?: string
+    bg?: string 
+    measure?: boolean
 }
 interface MainTextListProps {
     title: React.ReactNode | string
@@ -15,3 +16,4 @@ interface MainTextLinkProps {
     to: string
     title: string
 }
+interface MainTextWindowProps extends MainTextListProps {}

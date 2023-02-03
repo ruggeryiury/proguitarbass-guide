@@ -1,5 +1,5 @@
-import AppProvider from "../contexts/AppProvider"
-import AppRouter from "../routes/AppRouter"
+import AppProvider from "./AppProvider"
+import AppRouter from "./AppRouter"
 
 const App = () => {
     return (

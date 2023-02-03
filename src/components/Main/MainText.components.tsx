@@ -5,47 +5,66 @@ export const MainTextTitle: React.FC<React.PropsWithChildren<MainTextTitleProps>
 }
 
 export const MainTextParagraph: React.FC<React.PropsWithChildren> = ({ children }) => {
-    return <p className="font-text text-left">{children}</p>
+    return <p className="font-text text-left">
+        {children}
+    </p>
 }
 
-export const MainTextBlock: React.FC<React.PropsWithChildren<MainTextBlockProps>> = ({ children, color, invertTextColor }) => {
-    return <span className={`inline-flex font-title py-1 px-2 rounded-sm text-sm mx-1 tracking-normal self-center relative -top-[0.10rem] ${color ? "" : "bg-cyan-800"}`} style={{
-        backgroundColor: color ? color : "",
-        color: invertTextColor ? "#080808" : ""
-    }}>{children}</span>
+export const MainTextBlock: React.FC<React.PropsWithChildren<MainTextBlockProps>> = ({ children, text, bg, measure }) => {
+
+    return (
+        <span className={`inline-flex font-normal font-title py-1 px-2 mx-2 rounded-sm text-sm mx-1 tracking-normal self-center relative -top-[0.10rem] ${bg ? "" : "bg-cyan-800"} ${text ? text : "text-main-white"}`}>
+            {measure ? "[XX:X:XXX]" : children}
+        </span>
+    )
 }
 
 export const MainTextList: React.FC<React.PropsWithChildren<MainTextListProps>> = ({ children, title }) => {
-    return <li className='list-inside list-disc'>
-        <span className="relative -ml-2 z-[-1]">
-            <strong className="text-cyan-500 ">{typeof title === 'string' ? `${title}: ` : title}</strong>
-            {children ? children : ""}
-        </span>
-    </li>
+
+    return (
+        <li className='list-inside list-disc'>
+            <span className="relative -ml-2 z-[-1]" />
+            <strong className="text-cyan-500">{title}:</strong> {children ? children : ""}
+        </li>
+    )
 }
 
 export const MainTextOptions: React.FC<React.PropsWithChildren> = ({ children }) => {
+
     return <li className="list-inside list-disc mb-0 last:mb-4">{children}</li>
 }
 
 export const MainTextHref: React.FC<React.PropsWithChildren<MainTextHrefProps>> = ({ children, href }) => {
+
     if (href.startsWith("http")) {
-        return (
-            <a href={href} target="_blank" rel="noreferrer" className='inline text-cyan-500 hover:underline'>{children}</a>
-        )
+        return <a href={href} target="_blank" rel="noreferrer" className='inline text-cyan-500 hover:underline'>{children}</a>
+
     } else if (href.startsWith("/")) {
-        return (
-            <Link to={href} className='inline text-cyan-500 hover:underline'>{children}</Link>
-        )
+        return <Link to={href} className='inline text-cyan-500 hover:underline'>{children}</Link>
+
     } else {
         return null
+
     }
 }
 
 export const MainTextLink: React.FC<React.PropsWithChildren<MainTextLinkProps>> = ({ children, to, title }) => {
-    return <li className='list-inside list-disc'>
-        <span className="relative -ml-2 z-[-1]">
-            <a href={to} target="_blank" rel="noreferrer" className='tracking-tight inline font-bold text-cyan-500 hover:underline'>{title}</a>: {children}
-        </span>
-    </li>
+
+    return (
+        <li className='list-inside list-disc'>
+            <span className="relative -ml-2 z-[-1]" />
+            <a href={to} target="_blank" rel="noreferrer" className='tracking-tight inline font-bold text-cyan-500 hover:underline'>{title}:</a> {children}
+        </li>
+    )
+}
+
+export const MainTextWindow: React.FC<React.PropsWithChildren<MainTextWindowProps>> = ({ children, title }) => {
+    return (
+        <ul className="bg-neutral-800/90 rounded p-2 mb-4 last:mb-0">
+            <li className='list-inside list-disc flex flex-col'>
+                <span className="relative -ml-2 z-[-1]" />
+                <strong className="text-cyan-500 font-title font-normal mb-2 border-b-2 border-main-white/25 pb-2">{title}</strong><span className="italic text-right tablet-md:text-left"> {children ? children : ""}</span>
+            </li>
+        </ul>
+    )
 }

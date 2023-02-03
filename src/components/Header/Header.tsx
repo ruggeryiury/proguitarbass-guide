@@ -24,9 +24,10 @@ const Header = () => {
                         <ButtonArea title="Basics">
                             <HeaderDropdownButtons title="Notes" url="/notes" />
                             <HeaderDropdownButtons title="Chords" url="/chords" />
-                            <HeaderDropdownButtons title="Muted Notes & Chords" url="/muted-notes-and-chords" />
+                            <HeaderDropdownButtons title="Left Hand Position" url="/left-hand-position" />
                         </ButtonArea>
-                        <ButtonArea title="Markers">
+                        <ButtonArea title="Notes and Markers">
+                            <HeaderDropdownButtons title="Muted Notes & Chords" url="/muted-notes-and-chords" />
                             <HeaderDropdownButtons title="HO/PO Marker" url="/hopo" />
                             <HeaderDropdownButtons title="Slide Marker" url="/slide" />
                             <HeaderDropdownButtons title="Arpeggio Marker" url="/arpeggio" />
@@ -34,7 +35,6 @@ const Header = () => {
                             <HeaderDropdownButtons title="Force Chord Numbering" url="/force-chord-numbering" />
                         </ButtonArea>
                         <ButtonArea title="Events">
-                            <HeaderDropdownButtons title="Fret Hand Position" url="/fret-hand-position" />
                             <HeaderDropdownButtons title="Note Encodings" url="/note-encodings" />
                             <HeaderDropdownButtons title="Overdrive, Solo & BRE" url="/overdrive-solo-bre" />
                             <HeaderDropdownButtons title="Trainer Sections" url="/trainer-sections" />
