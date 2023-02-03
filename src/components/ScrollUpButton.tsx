@@ -15,7 +15,7 @@ const ScrollUpButton: React.FC<ScrollUpButtonProps> = ({ show }) => {
     }
 
     return show ? null : (
-        <button aria-label="Scroll to Top" className="flex laptop:hidden fixed z-50 bottom-0 right-0 m-3 border-2 p-1 border-main-white/25 bg-main-black/90 ml-auto rounded-md" onClick={ev=>ScrollUp(ev)}>
+        <button aria-label="Scroll to Top" className="flex laptop:hidden fixed z-10 bottom-0 right-0 m-3 border-2 p-1 border-main-white/25 bg-main-black/90 ml-auto rounded-md" onClick={ev=>ScrollUp(ev)}>
             <TbArrowBigTop />
         </button>
     )

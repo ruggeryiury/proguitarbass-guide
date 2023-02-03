@@ -21,7 +21,7 @@ const PageAnchors = (page: string): AnchorsLinkDocument[] => {
         return [{ title: "Overdrive", id: "overdrive" }, { title: "Solo Markers", id: "soloMarkers" }, { title: "Big Rock Endings", id: "bigRockEndings" }]
 
     } else if (page === 'common-magma-errors') {
-        return [{title: "Related to Gems", id: "relatedToGems"}, {title: "Related to MIDI Notes", id: "relatedToMIDINotes"}, {title: "Related to Chords", id: "relatedToChords"}, {title: "Related to Left Hand Position Markers", id: "relatedToLHPMarkers"}, {title: "Related to Overdrive", id: "relatedToOverdrive"}, {title: "Other Errors", id: "otherErrors"}]
+        return [{title: "Related to Gems", id: "relatedToGems"}, {title: "Related to MIDI Notes", id: "relatedToMIDINotes"}, {title: "Related to Chords", id: "relatedToChords"}, {title: "Related to Left Hand Position", id: "relatedToLHP"}, {title: "Related to Overdrive", id: "relatedToOverdrive"}, {title: "Other Errors", id: "otherErrors"}]
     } else {
         return []
     }

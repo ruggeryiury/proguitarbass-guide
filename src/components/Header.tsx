@@ -1,23 +1,21 @@
-import ButtonArea from './ButtonArea'
-import HeaderDropdownButtons from './HeaderDropdownButtons'
-import HeaderTitle from './HeaderTitle'
-import { FiMenu } from 'react-icons/fi'
 import { useState } from 'react'
+import { FiMenu } from 'react-icons/fi'
+import { HeaderTitle, ButtonArea, HeaderDropdownButtons } from './Header.components'
 import HeaderMenu from './HeaderMenu'
 
 const Header = () => {
-    const [headerMenu, setHeaderMenu] = useState(false)
 
-    const HandleHeaderButton = (ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        const HeaderMenuContent = document.getElementById("HeaderMenuContent") as HTMLDivElement
-        HeaderMenuContent.scrollTo({ top: 0 })
-        setHeaderMenu(true)
-    }
+    // This state is used when the mobile menu button is pressed, activating the
+    // header menu.
+    //
+    // This is also sent as props to the Header Menu component, so it's able to
+    // send a state dispatch through it to close the component.
+    const [headerMenu, setHeaderMenu] = useState(false)
 
     return (
         <>
-            <HeaderMenu activated={headerMenu} action={setHeaderMenu} />
-            <header className='relative z-10 w-full h-[8%] tablet-md:h-[6%] bg-[#222] bg-[url("../../assets/images/pattern-transparency-sm.webp")] bg-[length:128px] outline outline-2 outline-main-white/25 animate-patternMove'>
+            <HeaderMenu activated={headerMenu} setHeaderMenu={setHeaderMenu} />
+            <header className='relative z-10 w-full landscape:h-[12%] portrait:h-[8%] landscape:laptop:h-[6%] portrait:tablet-md:h-[6%] bg-[#222] bg-[url("../../assets/images/pattern-transparency-sm.webp")] bg-[length:128px] outline outline-2 outline-main-white/25 animate-patternMove'>
                 <div className='h-full bg-gradient-to-t from-transparent to-[#111] flex-row w-full items-center px-4'>
                     <HeaderTitle />
                     <div className='hidden laptop:flex flex-row ml-auto h-full'>
@@ -26,13 +24,14 @@ const Header = () => {
                             <HeaderDropdownButtons title="Chords" url="/chords" />
                             <HeaderDropdownButtons title="Left Hand Position" url="/left-hand-position" />
                         </ButtonArea>
-                        <ButtonArea title="Notes and Markers">
+                        <ButtonArea title="Notes & Markers">
                             <HeaderDropdownButtons title="Muted Notes & Chords" url="/muted-notes-and-chords" />
-                            <HeaderDropdownButtons title="HO/PO Marker" url="/hopo" />
-                            <HeaderDropdownButtons title="Slide Marker" url="/slide" />
-                            <HeaderDropdownButtons title="Arpeggio Marker" url="/arpeggio" />
-                            <HeaderDropdownButtons title="Strumming Pattern Marker" url="/strumming-pattern" />
+                            <HeaderDropdownButtons title="Hammer-ons & Pull-offs" url="/hopo" />
+                            <HeaderDropdownButtons title="Slide Markers" url="/slide" />
+                            <HeaderDropdownButtons title="Arpeggio Markers" url="/arpeggio" />
+                            <HeaderDropdownButtons title="Strumming Pattern Markers" url="/strumming-pattern" />
                             <HeaderDropdownButtons title="Force Chord Numbering" url="/force-chord-numbering" />
+                            <HeaderDropdownButtons title='Trill & Tremolo Markers' url='/trill-tremolo' />
                         </ButtonArea>
                         <ButtonArea title="Events">
                             <HeaderDropdownButtons title="Note Encodings" url="/note-encodings" />
@@ -46,7 +45,7 @@ const Header = () => {
                             <HeaderDropdownButtons title="Common MAGMA Errors" url="/common-magma-errors" />
                         </ButtonArea>
                     </div>
-                    <button aria-label='Header Menu' className='border-2 p-1 border-main-white/25 ml-auto rounded-md flex laptop:hidden' onClick={ev => HandleHeaderButton(ev)}><FiMenu className='text-xl tablet-md:text-base' /></button>
+                    <button aria-label='Header Menu' className='border-2 p-1 border-main-white/25 ml-auto rounded-md flex laptop:hidden' onClick={ev => setHeaderMenu(true)}><FiMenu className='text-xl tablet-md:text-base' /></button>
                 </div>
             </header>
         </>

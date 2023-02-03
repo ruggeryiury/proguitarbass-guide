@@ -1,7 +1,8 @@
-import MainComponent from "../components/Main/MainComponent"
-import { MainTextParagraph as Paragraph, MainTextTitle as Title, MainTextOptions as Options, MainTextBlock as Block, MainTextHref as Href, MainTextList as List, MainTextLink as Link, MainTextWindow as Window } from "../components/Main/MainText.components"
+import MainComponent from "../components/MainComponent"
+import { MainTextParagraph as Paragraph, MainTextTitle as Title, MainTextOptions as Options, MainTextBlock as Block, MainTextHref as Href, MainTextList as List, MainTextLink as Link, MainTextWindow as Window } from "../components/MainText.components"
 import PageAnchors from "../services/utils/PageAnchors"
 import IndexFingerExampleImg from '../assets/images/index-finger.webp'
+import IndexFingerExampleImgMobile from '../assets/images/index-finger-mobile.webp'
 
 export const Index = () => {
     return (
@@ -192,7 +193,8 @@ export const LeftHandPosition = () => {
             </Paragraph>
 
             <Title id='concept'>Concept</Title>
-            <img src={IndexFingerExampleImg} alt='Left Hand Position Note explained' width='1266px' height='620px' className="mb-4" />
+            <img src={IndexFingerExampleImg} alt='Left Hand Position Note explained' width='1266px' height='620px' className="hidden tablet-md:flex mb-4" />
+            <img src={IndexFingerExampleImgMobile} alt='Left Hand Position Note explained' width='1266px' height='620px' className="flex tablet-md:hidden mb-4" />
             <Paragraph>
                 The <strong className="text-cyan-500">LEFT HAND POSITION NOTES</strong> is used to keep track where the player's index finger should be on the fretboard. On a range, the player can use your middle, ring, and pinky finger to play higher notes on the fretboard. The position is determined by <strong>the note velocity</strong> (the same as <Href href='/notes'>notes</Href>). Open string notes are not affected by <strong className="text-cyan-500">LEFT HAND POSITION NOTES</strong> and it is accepted with any note velocity. By so, <strong className="text-cyan-500">LEFT HAND POSITION NOTES</strong> with velocity 100 must not be used.
                 <br /><br />
@@ -227,7 +229,7 @@ export const HOPO = () => {
     return (
         <MainComponent title="Hammer-Ons & Pull-Offs" anchors={PageAnchors('hopo')}>
             <Paragraph>
-                Hammer-Ons and Pull-Offs (HO/PO) are usual techniques for guitar/bass players. On PRO Guitar/Bass, HO/PO notes work the same way as on 5-lane guitar/bass/keys, letting you to play a note without strumming. HO/PO notes display in-game as notes with a luminous light around them.
+                Hammer-ons and Pull-offs (HO/POs) are usual techniques for guitar/bass players. On PRO Guitar/Bass, HO/PO notes work the same way as on 5-lane guitar/bass/keys, letting you to play a note without strumming. HO/PO notes display in-game as notes with a luminous light around them.
                 <br /><br />
                 Chords can also be played without strumming, but <strong>only</strong> if you place a <strong className="text-cyan-500">HO/PO MARKER</strong> <Block>F♯6</Block> (102) (for Expert difficulty) aligned to it, since the HO/PO Threshold doesn't affect them (just like on 5-lane guitar/bass/keys). <em>Unlike notes, they don't have any visual distinction in-game, displayed just like normal chord notes.</em>
                 <br /><br />
@@ -246,7 +248,7 @@ export const HOPO = () => {
 
 export const Slide = () => {
     return (
-        <MainComponent title="Slide Marker" anchors={PageAnchors('slide')}>
+        <MainComponent title="Slide Markers" anchors={PageAnchors('slide')}>
             <Paragraph>
                 Slide notes and chords appear in-game with curved sustain tails, telling the player which direction it must slide the note/chord. To make a note/chord a slide one, you must place a <strong className="text-cyan-500">SLIDE MARKER</strong> <Block children="G6" /> (103) (for Expert difficulty) encopassing the whole note/chord you want to be a slide one.
             </Paragraph>
@@ -289,7 +291,7 @@ export const Slide = () => {
 
 export const Arpeggio = () => {
     return (
-        <MainComponent title="Arpeggio Marker" anchors={PageAnchors('arpeggio')}>
+        <MainComponent title="Arpeggio Markers" anchors={PageAnchors('arpeggio')}>
             <Paragraph>
                 An arpeggio is a type of broken chord, in which the notes that compose a chord are played, mostly, in a rising or descending order. To place an arpeggio, you have the <strong className="text-cyan-500">ARPEGGIO MARKER</strong> <Block>G♯6</Block> (104) (for Expert difficulty).
                 <br /><br />
@@ -311,7 +313,7 @@ export const Arpeggio = () => {
 
 export const StrummingPatterns = () => {
     return (
-        <MainComponent title='Strumming Pattern Marker' anchors={PageAnchors('strumming-pattern')}>
+        <MainComponent title='Strumming Pattern Markers' anchors={PageAnchors('strumming-pattern')}>
             <Paragraph>
                 The Strumming Pattern is a feature that tells the player which part should be emphasized on the strumming. It is commonly used to tells the player the direction of the strumming as well. Instead of breaking chords to emphasize lower, middle, or higher strings, you can use the <strong className="text-cyan-500">STRUMMING PATTERN MARKER</strong> <Block>A6</Block> (105) (for Expert difficulty) so you won't have to deal with the same chord name appearing many times throughout the section this chord is being particularly played.
                 <br /><br />
@@ -337,7 +339,13 @@ export const ForceChordNumbering = () => {
 }
 
 export const TrillTremolo = () => {
-    return null
+    return (
+        <MainComponent title='Trill & Tremolo Markers' anchors={PageAnchors('trill-tremolo')}>
+            <Paragraph>
+
+            </Paragraph>
+        </MainComponent>
+    )
 }
 
 export const NoteEncondings = () => {
@@ -525,7 +533,7 @@ export const CommonMAGMAErrors = () => {
                 If a chord is found on any track, you must place a <Href href='/chords'>Root Note Indicator or a Hide Chord Marker</Href> <strong>before or aligned to it</strong>.
             </Window>
 
-            <Title id='relatedToLHPMarkers'>Related to Left Hand Position Markers</Title>
+            <Title id='relatedToLHP'>Related to Left Hand Position</Title>
             <Window title={
                 <span>No left hand position set for gem at <Block measure /></span>
             }>
@@ -534,7 +542,7 @@ export const CommonMAGMAErrors = () => {
             <Window title={
                 <span>Fret is less than left hand position on gem at <Block measure /></span>
             }>
-                The specified gem has <strong>lower velocity than the declared <Href href='/left-hand-position'>Left Hand Position note</Href> before or aligned to it</strong>. 
+                The specified gem has <strong>lower velocity than the declared <Href href='/left-hand-position'>Left Hand Position note</Href> before or aligned to it</strong>.
             </Window>
             <Window title={
                 <span>Fret is too far away from left hand position on gem at <Block measure /></span>

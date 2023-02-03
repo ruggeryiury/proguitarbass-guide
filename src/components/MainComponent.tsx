@@ -17,7 +17,7 @@ const MainComponent: React.FC<React.PropsWithChildren<MainComponentProps>> = ({ 
         <>
             <ScrollUpButton show={inView} />
 
-            <main className="flex-col laptop:flex-row w-full h-[92%] tablet-md:h-[94%] justify-center overflow-y-auto laptop:overflow-y-hidden animate__animated animate__fadeIn animate__faster">
+            <main className="flex-col laptop:flex-row w-full landscape:h-[88%] portrait:h-[92%] landscape:laptop:h-[94%] portrait:tablet-md:h-[94%] justify-center overflow-y-auto laptop:overflow-y-hidden animate__animated animate__fadeIn animate__faster">
                 <div className="hidden laptop:flex h-full w-full laptop:w-[22%] py-6 px-6 tablet-md:px-12 laptop:px-8 border-r-0 laptop:border-r-2 border-main-white/10">
                     <h1 className="!leading-[1.10] text-xl laptop-lg:text-2xl desktop:text-3xl text-left mb-4 w-full pb-2 border-b-2 border-main-white/25">{title.toUpperCase()}</h1>
                     {
