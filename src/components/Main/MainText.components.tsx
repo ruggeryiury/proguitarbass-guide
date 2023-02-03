@@ -13,7 +13,7 @@ export const MainTextParagraph: React.FC<React.PropsWithChildren> = ({ children 
 export const MainTextBlock: React.FC<React.PropsWithChildren<MainTextBlockProps>> = ({ children, text, bg, measure }) => {
 
     return (
-        <span className={`inline-flex font-normal font-title py-1 px-2 mx-2 rounded-sm text-sm mx-1 tracking-normal self-center relative -top-[0.10rem] ${bg ? "" : "bg-cyan-800"} ${text ? text : "text-main-white"}`}>
+        <span className={`inline-flex font-normal font-title py-1 px-2 mx-2 rounded-sm text-sm mx-1 tracking-normal self-center relative -top-[0.10rem] ${bg ? `bg-[${bg}]` : "bg-cyan-800"} ${text ? text : "text-main-white"}`}>
             {measure ? "[XX:X:XXX]" : children}
         </span>
     )
