@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/proguitarbass-guide/static/css/main.f76c604f.css",
-    "main.js": "/proguitarbass-guide/static/js/main.423ef047.js",
+    "main.js": "/proguitarbass-guide/static/js/main.86c14f95.js",
     "static/media/index-finger.webp": "/proguitarbass-guide/static/media/index-finger.2fe19b5eb2298be474d0.webp",
     "static/media/background.webp": "/proguitarbass-guide/static/media/background.64d384e5878ab3ec4412.webp",
-    "service-worker.js": "/proguitarbass-guide/service-worker.js",
     "static/media/Aeroport-BoldItalic.woff": "/proguitarbass-guide/static/media/Aeroport-BoldItalic.e687e1ac863835a5833d.woff",
     "static/media/Aeroport-Italic.woff": "/proguitarbass-guide/static/media/Aeroport-Italic.c14d7da19be127b0bc51.woff",
     "static/media/Aeroport-Bold.woff": "/proguitarbass-guide/static/media/Aeroport-Bold.e2ffc4a8c1fc9619ec81.woff",
@@ -16,10 +15,10 @@
     "static/media/pattern-transparency-sm.webp": "/proguitarbass-guide/static/media/pattern-transparency-sm.cc265f0ff77ba4d4d775.webp",
     "index.html": "/proguitarbass-guide/index.html",
     "main.f76c604f.css.map": "/proguitarbass-guide/static/css/main.f76c604f.css.map",
-    "main.423ef047.js.map": "/proguitarbass-guide/static/js/main.423ef047.js.map"
+    "main.86c14f95.js.map": "/proguitarbass-guide/static/js/main.86c14f95.js.map"
   },
   "entrypoints": [
     "static/css/main.f76c604f.css",
-    "static/js/main.423ef047.js"
+    "static/js/main.86c14f95.js"
   ]
 }
