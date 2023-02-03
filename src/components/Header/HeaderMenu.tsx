@@ -50,11 +50,11 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ activated, action }) => {
                 <div>
                     <Link to="/notes" onClick={ev => CloseHeaderMenu()}>NOTES</Link>
                     <Link to="/chords" onClick={ev => CloseHeaderMenu()}>CHORDS</Link>
-                    <Link to='/muted-notes-and-chords' onClick={ev => CloseHeaderMenu()}>MUTED NOTES & CHORDS</Link>
                 </div>
 
                 <h2>MARKERS</h2>
                 <div>
+                    <Link to='/muted-notes-and-chords' onClick={ev => CloseHeaderMenu()}>MUTED NOTES & CHORDS</Link>
                     <Link to='/hopo' onClick={ev => CloseHeaderMenu()}>HO/PO MARKER</Link>
                     <Link to='/slide' onClick={ev => CloseHeaderMenu()}>SLIDE MARKER</Link>
                     <Link to='/arpeggio' onClick={ev => CloseHeaderMenu()}>ARPEGGIO MARKER</Link>
@@ -63,7 +63,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ activated, action }) => {
                 </div>
                 <h2>EVENTS</h2>
                 <div>
-                    <Link to='/fret-hand-position' onClick={ev => CloseHeaderMenu()}>FRET HAND POSITION</Link>
+                    <Link to='/left-hand-position' onClick={ev => CloseHeaderMenu()}>LEFT HAND POSITION</Link>
                     <Link to='/note-encodings' onClick={ev => CloseHeaderMenu()}>NOTE ENCODINGS</Link>
                     <Link to='/overdrive-solo-bre' onClick={ev => CloseHeaderMenu()}>OVERDRIVE, SOLO & BRE</Link>
                     <Link to='/trainer-sections' onClick={ev => CloseHeaderMenu()}>TRAINER SECTIONS</Link>

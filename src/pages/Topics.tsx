@@ -211,7 +211,7 @@ export const LeftHandPosition = () => {
 
 export const MutedNotesAndChords = () => {
     return (
-        <MainComponent title="Muted Notes and Chords" anchors={PageAnchors('muted-notes-and-chords')}>
+        <MainComponent title="Muted Notes & Chords" anchors={PageAnchors('muted-notes-and-chords')}>
             <Paragraph>
                 Most PRO Guitar/Bass functions are encoded using markers and/or channel encodings. To author muted notes/chords, you must encode the note/chord notes on <Block bg="#00578c">MIDI CHANNEL 4</Block>. Muted notes and chords are displayed in-game as blue shapes withour fret numbering.
                 <br /><br />
