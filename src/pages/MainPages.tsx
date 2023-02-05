@@ -1,15 +1,26 @@
+// React-related imports
+import { useContext } from "react"
+import { AppContext } from "../app/AppProvider"
+
+// Main components
 import MainComponent from "../components/MainComponent"
-import { MainTextParagraph as Paragraph, MainTextTitle as Title, MainTextOptions as Options, MainTextBlock as Block, MainTextHref as Href, MainTextList as List, MainTextLink as Link, MainTextWindow as Window } from "../components/MainText.components"
-import PageAnchors from "../services/utils/PageAnchors"
+import { MainParagraph as Paragraph, MainTitle as Title, MainOptions as Options, MainBlock as Block, MainHref as Href, MainList as List, MainLink as Link, MainWindow as Window } from "../components/MainComponent.components"
+
+// Left Hand Position images
 import IndexFingerExampleImg from '../assets/images/index-finger.webp'
 import IndexFingerExampleImgMobile from '../assets/images/index-finger-mobile.webp'
 
 export const Index = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'index'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title="Ruggy's PRO Guitar/Bass Guide" anchors={PageAnchors('index')}>
+        <MainComponent id={id} title="Getting Started">
             <Title id='introduction'>Introduction</Title>
             <Paragraph>This guide will help you creating PRO Guitar/Bass parts for your customs, with every single PRO mode features explained.<br /><br />Here are some things you should consider before authoring PRO Guitar/Bass parts:</Paragraph>
-            <ul>
+            <ul className="list-disc">
                 <List title="Playability VS. Accuracy">All PRO Guitar/Bass charts must follow their 5-lane charts, but certain dynamics and articulations are way easier to portrait on 5-lane charts. Sometimes, you'll chart different guitar sections and realize there's a big fret jumping between one charted section to the other, Then this happens, feel free to underchart, and even take a 4th note space away from the chart to let the player position its hand to keep playing the song. Songs were meant to be playable and this rule applies to everything. If you're in doubt of what to do, ask to any PRO Guitar/Bass player for opinions about how's the best approach for your song.</List>
                 <List title="Basic music theory knowlegde">Just like PRO Keys parts, music theory plays a big role while charting PRO Guitar/Bass parts, so it's inevitable for you to understand basic concepts of playing guitar/bass to make PRO Guitar/Bass parts for your custom.</List>
             </ul>
@@ -22,41 +33,49 @@ export const Index = () => {
             </ul>
 
             <Title id='preparingYourReaperProject'>Preparing Your Reaper Project</Title>
-            <ul>
-                <List title='Install PRO Guitar Preview, and the PRO Guitar/Bass note names'>
+            <ol className="list-decimal">
+                <List title='Install PRO Guitar Preview, and the PRO Guitar/Bass note names' decimal>
                     The <em>PRO Guitar/Bass Preview plugin</em> must be placed anywhere inside <em className='text-cyan-500 break-words'>AppData\Roaming\REAPER\Effects</em>, and the note names text files must be placed where you have all the other note names text files that is installed using the RBN2 Authoring Tools.
                 </List>
-                <List title="Create PRO Guitar/Bass tracks">
+                <List title="Create PRO Guitar/Bass tracks" decimal>
                     Start by adding two new tracks on your REAPER project:
-                    <br /><br />
-
-                    <Block children="PART REAL_GUITAR" /> for <em>PRO Guitar</em> parts.
-                    <br />
-                    <Block children="PART REAL_BASS" /> for <em>PRO Bass</em> parts.
-                    <br /><br />
-
+                </List>
+                <ul className="list-disc pl-2 mt-2">
+                    <Options>
+                        <Block children="PART REAL_GUITAR" /> for <em>PRO Guitar</em> parts.
+                    </Options>
+                    <Options>
+                        <Block children="PART REAL_BASS" /> for <em>PRO Bass</em> parts.
+                    </Options>
+                </ul>
+                <Paragraph>
                     These tracks is meant to be played on the 17-fret <em>Mustang PRO Guitar</em>, if your Guitar/Bass chart has notes above the 17-fret, you must chart these on <Block children='PART REAL_GUITAR_22' /> and <Block children="PART REAL_BASS_22" /> tracks and they're only used when you're playing with the <em>Squier PRO Guitar Controller</em>.
                     <br /><br />
 
-                    <Block children='PART REAL_GUITAR' /> and <Block children="PART REAL_BASS" /> tracks are <strong>obrigatory</strong> even if your chart has notes above the 17-fret. Notes above the 17th fret must be transposed to suit in the 17-fret tracks while trying to connect the transposed notes without messing with the player's fret position too much. To do this, try to also transpose notes within a big section where the player can play all notes correctly.
-                </List>
-                <List title='Load PRO Guitar/Bass note names'>
+                    <Block children='PART REAL_GUITAR' noMarginLeft /> and <Block children="PART REAL_BASS" /> tracks are <strong>obrigatory</strong> even if your chart has notes above the 17-fret. Notes above the 17th fret must be transposed to suit in the 17-fret tracks while trying to connect the transposed notes without messing with the player's fret position too much. To do this, try to also transpose notes within a big section where the player can play all notes correctly.
+                </Paragraph>
+                <List title='Load PRO Guitar/Bass note names' decimal>
                     On the track editor, go to <em className='text-cyan-500'>File &gt; Customize note names &gt; Load note names from file...</em> and Select the "RB PRO Guitar-Bass Expert.txt" file from the .
                 </List>
-                <List title='Place the notes color based on the MIDI channel'>
+                <List title='Place the notes color based on the MIDI channel' decimal>
                     The MIDI notes channels plays a major role on the PRO Guitar/Bass authoring. To view notes color based on the MIDI channel, open the MIDI track and to go <em className='text-cyan-500'>View &gt; Color notes by &gt; Channel</em>.
                 </List>
-                <List title="Configure the PRO Guitar Preview FX">
+                <List title="Configure the PRO Guitar Preview FX" decimal>
                     On the tracks' FX, add the <em>PRO Guitar Preview</em> and add <em>ReaSynth</em> (or any other VST plugin), so you can hear the notes you charted.
                 </List>
-            </ul>
+            </ol>
         </MainComponent>
     )
 }
 
 export const Notes = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'notes'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title='Notes' anchors={PageAnchors('notes')}>
+        <MainComponent id={id} title='Notes'>
             <Paragraph>
                 You must handle with two basic things while authoring PRO Guitar/Bass notes, that are the strings and frets.
             </Paragraph>
@@ -65,7 +84,7 @@ export const Notes = () => {
             <Paragraph>
                 To determine the strings of a note, we use these MIDI notes:
             </Paragraph>
-            <ul>
+            <ul className="list-disc">
                 <Options>From <Block>C6</Block> (96) to <Block>F6</Block> (101) for Expert difficulty.</Options>
                 <Options>From <Block>C4</Block> (72) to <Block>F4</Block> (77) for Hard difficulty.</Options>
                 <Options>From <Block>C2</Block> (48) to <Block>F2</Block> (53) for Medium difficulty.</Options>
@@ -81,8 +100,13 @@ export const Notes = () => {
 }
 
 export const Chords = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'chords'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title='Chords' anchors={PageAnchors('chords')}>
+        <MainComponent id={id} title='Chords'>
             <Paragraph>
                 A chord is a group of notes sounded together, as a basis of harmony. On Rock Band 3, they're displayed as blue shapes, displaying only the lower note of a chord on its string and creating a shape based on it. Open notes will be displayed as white.
             </Paragraph>
@@ -186,8 +210,13 @@ export const Chords = () => {
 }
 
 export const LeftHandPosition = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'left-hand-position'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title='Left Hand Position' anchors={PageAnchors('left-hand-position')}>
+        <MainComponent id={id} title='Left Hand Position'>
             <Paragraph>
                 Left Hand Position notes are charted on MIDI note <Block>C7</Block> (108). In-game, nothing is fisically or visually influenced by these notes, but they're still required, as you can get <Href href="/common-magma-errors">MAGMA errors</Href> related to them.
             </Paragraph>
@@ -212,8 +241,13 @@ export const LeftHandPosition = () => {
 }
 
 export const MutedNotesAndChords = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'muted-notes-and-chords'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title="Muted Notes & Chords" anchors={PageAnchors('muted-notes-and-chords')}>
+        <MainComponent id={id} title="Muted Notes & Chords">
             <Paragraph>
                 Most PRO Guitar/Bass functions are encoded using markers and/or channel encodings. To author muted notes/chords, you must encode the note/chord notes on <Block bg="#00578c">MIDI CHANNEL 4</Block>. Muted notes and chords are displayed in-game as blue shapes withour fret numbering.
                 <br /><br />
@@ -226,8 +260,13 @@ export const MutedNotesAndChords = () => {
 }
 
 export const HOPO = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'hopo'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title="Hammer-Ons & Pull-Offs" anchors={PageAnchors('hopo')}>
+        <MainComponent id={id} title="Hammer-Ons & Pull-Offs">
             <Paragraph>
                 Hammer-ons and Pull-offs (HO/POs) are usual techniques for guitar/bass players. On PRO Guitar/Bass, HO/PO notes work the same way as on 5-lane guitar/bass/keys, letting you to play a note without strumming. HO/PO notes display in-game as notes with a luminous light around them.
                 <br /><br />
@@ -237,7 +276,7 @@ export const HOPO = () => {
                 <br /><br />
                 There are three possible articulations of HO/PO notes:
             </Paragraph>
-            <ul>
+            <ul className="list-disc">
                 <List title="Based on the HO/PO Threshold">Notes are automatically displayed as HO/PO if they are 1/16th note (or closer) of each other.</List>
                 <List title="Forcing HO/PO Notes On">You can force notes to be HO/PO notes by using the <strong className="text-cyan-500">HO/PO MARKER</strong> <Block>F♯6</Block> (102) (for Expert difficulty). Like on 5-lane guitar/bass/keys, you can force HO/PO on with multiple notes in a row as well, just place a marker encopassing all the notes you want to be displayed as HO/PO.</List>
                 <List title="Forcing HO/PO Notes Off">You can force notes NOT to be HO/PO notes by using the <strong className="text-cyan-500">HO/PO MARKER</strong> <Block>F♯6</Block> (102) (for Expert difficulty) encoded on <Block bg="#758c5e">MIDI CHANNEL 13</Block>. Forcing HO/PO off is useful for songs with slow BPMs (100BPM or lower), since 1/16th note sequences aren't fast enough to avoid strumming. On songs with higher BPMs, it must be used sparingly and with conscience, since it can make the song unfairly harder to play.</List>
@@ -247,8 +286,13 @@ export const HOPO = () => {
 }
 
 export const Slide = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'slide'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title="Slide Markers" anchors={PageAnchors('slide')}>
+        <MainComponent id={id} title="Slide Markers">
             <Paragraph>
                 Slide notes and chords appear in-game with curved sustain tails, telling the player which direction it must slide the note/chord. To make a note/chord a slide one, you must place a <strong className="text-cyan-500">SLIDE MARKER</strong> <Block children="G6" /> (103) (for Expert difficulty) encopassing the whole note/chord you want to be a slide one.
             </Paragraph>
@@ -260,7 +304,7 @@ export const Slide = () => {
                 Actually, <strong className="text-cyan-500">SLIDE MARKERS</strong> directions have two rules they can follow:
             </Paragraph>
 
-            <ul>
+            <ul className="list-disc">
                 <Options>The <span className="text-cyan-500">FRET</span> rule, by default.</Options>
                 <Options>The <span className="text-cyan-500">1/16 NOTE GAP</span> rule.</Options>
             </ul>
@@ -290,8 +334,13 @@ export const Slide = () => {
 }
 
 export const Arpeggio = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'arpeggio'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title="Arpeggio Markers" anchors={PageAnchors('arpeggio')}>
+        <MainComponent id={id} title="Arpeggio Markers">
             <Paragraph>
                 An arpeggio is a type of broken chord, in which the notes that compose a chord are played, mostly, in a rising or descending order. To place an arpeggio, you have the <strong className="text-cyan-500">ARPEGGIO MARKER</strong> <Block>G♯6</Block> (104) (for Expert difficulty).
                 <br /><br />
@@ -299,28 +348,35 @@ export const Arpeggio = () => {
                 <br /><br />
                 Any note/chord fragment that is compatible with the chord of the <strong className="text-cyan-500">ARPEGGIO MARKER</strong> are displayed as turquoise notes on every string.
                 There are two main concepts of using the <strong className="text-cyan-500">ARPEGGIO MARKER</strong>:
-                <ul>
-                    <Options>That, on the whole marker, you can let your fingers placed correctly on all respective frets of the chord.</Options>
-                    <Options>That the arpeggiated chord also serves as an accurate rhythm transcription of the respective moment of the song.</Options>
-                </ul>
+            </Paragraph>
+            <ul className="list-disc">
+                <Options>That, on the whole marker, you can let your fingers placed correctly on all respective frets of the chord.</Options>
+                <Options>That the arpeggiated chord also serves as an accurate rhythm transcription of the respective moment of the song.</Options>
+            </ul>
+            <Paragraph>
                 Incompatible notes can be placed inside an <strong className="text-cyan-500">ARPEGGIO MARKER</strong> as well, they are displayed in-game with the normal color of the respective string, to differentiate from compatible notes.
                 <br /><br />
                 The concept of using incompatible notes is that they can be played without undoing your fingers position for the asigned chord, althought specific cases can appear. Generally an incompatible note that is meant to be played with an unused finger on the chord formation, or losing any finger to play an open string is acceptable. All of these situations can let you go back to the compatible chord formation easily.
             </Paragraph>
-        </MainComponent>
+        </MainComponent >
     )
 }
 
-export const StrummingPatterns = () => {
+export const StrummingPattern = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'strumming-pattern'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title='Strumming Pattern Markers' anchors={PageAnchors('strumming-pattern')}>
+        <MainComponent id={id} title='Strumming Pattern Markers'>
             <Paragraph>
                 The Strumming Pattern is a feature that tells the player which part should be emphasized on the strumming. It is commonly used to tells the player the direction of the strumming as well. Instead of breaking chords to emphasize lower, middle, or higher strings, you can use the <strong className="text-cyan-500">STRUMMING PATTERN MARKER</strong> <Block>A6</Block> (105) (for Expert difficulty) so you won't have to deal with the same chord name appearing many times throughout the section this chord is being particularly played.
                 <br /><br />
                 To place a Strumming Pattern on a chord, just place a <strong className="text-cyan-500">STRUMMING PATTERN MARKER</strong> aligned to the chord you want to have a strumming pattern. The string emphasis is defined by the following MIDI channels:
 
             </Paragraph>
-            <ul>
+            <ul className="list-disc">
                 <Options> <Block bg="#5e8c7b">MIDI CHANNEL 14</Block> to emphasize higher strings. </Options>
                 <Options> <Block bg="#5e698c">MIDI CHANNEL 15</Block> to emphasize middle strings. </Options>
                 <Options> <Block bg="#875e8c">MIDI CHANNEL 16</Block> to emphasize lower strings. </Options>
@@ -330,8 +386,13 @@ export const StrummingPatterns = () => {
 }
 
 export const ForceChordNumbering = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'force-chord-numbering'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title='Force Chord Numbering' anchors={PageAnchors('force-chord-numbering')}>
+        <MainComponent id={id} title='Force Chord Numbering'>
             <Paragraph>
             </Paragraph>
         </MainComponent>
@@ -339,8 +400,13 @@ export const ForceChordNumbering = () => {
 }
 
 export const TrillTremolo = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'trill-tremolo'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title='Trill & Tremolo Markers' anchors={PageAnchors('trill-tremolo')}>
+        <MainComponent id={id} title='Trill & Tremolo Markers'>
             <Paragraph>
 
             </Paragraph>
@@ -348,15 +414,20 @@ export const TrillTremolo = () => {
     )
 }
 
-export const NoteEncondings = () => {
+export const NoteEncodings = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'note-encodings'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title='Note Encodings' anchors={PageAnchors('note-encodings')}>
+        <MainComponent id={id} title='Note Encodings'>
             <Paragraph>
                 All PRO Guitar/Bass functions are encoded using markers and channel encodings. Here is all possible channel encodings and their respective uses.
             </Paragraph>
 
             <Title id='channelUsedOnNotes'>Channel Used on Notes</Title>
-            <ul>
+            <ul className="list-disc">
                 <Options>
                     <Block bg="#8c0000">MIDI CHANNEL 1</Block>: The default channel for new notes on REAPER. On PRO Guitar/Bass authoring, it is used to display normal notes.
                 </Options>
@@ -379,7 +450,7 @@ export const NoteEncondings = () => {
             <Paragraph></Paragraph>
 
             <Title id='channelUsedOnMarkers'>Channel Used on Markers</Title>
-            <ul>
+            <ul className="list-disc">
                 <Options>
                     <Block bg="#8c6f5e">MIDI CHANNEL 12</Block>: Used on <Href href="/slide-notes">Slide Markers</Href> to <em>reverse a slide direction</em> based on each note rule.
                 </Options>
@@ -400,9 +471,14 @@ export const NoteEncondings = () => {
     )
 }
 
-export const OverdriveSoloBRE = () => {
+export const OverdrivesSolosBRE = () => {
+    const Context = useContext(AppContext)
+    
+    const id = 'overdrive-solo-bre'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title='Overdrive / Solo / BRE' anchors={PageAnchors('overdrive-solo-bre')}>
+        <MainComponent id={id} title='Overdrives, Solos & BRE'>
             <Paragraph>
                 <em>Overdrives</em>, <em>Solo markers</em>, and <em>Big Rock Endings</em> <strong>must match</strong> the 5-lane Guitar/Bass sections. If you already have 5-lane Guitar/Bass parts authored, just copy and paste on the PRO Guitar/Bass tracks.
             </Paragraph>
@@ -431,30 +507,35 @@ export const OverdriveSoloBRE = () => {
 }
 
 export const TrainerSections = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'trainer-sections'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title="Trainer Sections" anchors={PageAnchors('trainer-sections')}>
+        <MainComponent id={id} title="Trainer Sections">
             <Paragraph>
                 Trainer sections are authored as text events. These text events must be placed on the 17-fret tracks only.
             </Paragraph>
 
             <Title id='forProGuitar'>For PRO Guitar</Title>
-            <ul>
+            <ul className="list-disc">
                 <Options>
-                    <Block>[begin_pg song_trainer_pg_#]</Block> at the beginning of the trainer section, where <Block>#</Block> represents the trainer's count.
+                    <Block>[begin_pg song_trainer_pg_#]</Block> at the beginning of the trainer section, where # represents the trainer's count.
                 </Options>
                 <Options>
-                    <Block>[end_pg song_trainer_pg_#]</Block> at the end of the trainer section, where <Block>#</Block> represents the trainer's count.
+                    <Block>[end_pg song_trainer_pg_#]</Block> at the end of the trainer section, where # represents the trainer's count.
                 </Options>
             </ul>
             <Paragraph />
 
             <Title id='forProBass'>For PRO Bass</Title>
-            <ul>
+            <ul className="list-disc">
                 <Options>
-                    <Block>[begin_pb song_trainer_pb_#]</Block> at the beginning of the trainer section, where <Block>#</Block> represents the trainer's count.
+                    <Block>[begin_pb song_trainer_pb_#]</Block> at the beginning of the trainer section, where # represents the trainer's count.
                 </Options>
                 <Options>
-                    <Block>[end_pb song_trainer_pb_#]</Block> at the end of the trainer section, where <Block>#</Block> represents the trainer's count.
+                    <Block>[end_pb song_trainer_pb_#]</Block> at the end of the trainer section, where # represents the trainer's count.
                 </Options>
             </ul>
             <Paragraph />
@@ -463,18 +544,18 @@ export const TrainerSections = () => {
             <Paragraph>
                 By default, trainers create a gap at the end of the section for the player to breathe before the section starts again. On looped trainers, there's no pause between the beginning and the end of a section. To make a trainer section a looped one, add these text events anywhere between the beginning and the end of the trainer section:
             </Paragraph>
-            <ul>
+            <ul className="list-disc">
                 <Options>
-                    <Block>[pg_norm song_trainer_pg_#]</Block>, for PRO Guitar. Where <Block>#</Block> represents the trainer's count.
+                    <Block>[pg_norm song_trainer_pg_#]</Block>, for PRO Guitar. Where # represents the trainer's count.
                 </Options>
                 <Options>
-                    <Block>[pb_norm song_trainer_pb_#]</Block>, for PRO Bass. Where <Block>#</Block> represents the trainer's count.
+                    <Block>[pb_norm song_trainer_pb_#]</Block>, for PRO Bass. Where # represents the trainer's count.
                 </Options>
             </ul>
             <Paragraph />
 
             <Title id='rules'>Rules</Title>
-            <ul>
+            <ul className="list-disc">
                 <List title='Looped trainer sections must be grid-snapped'></List>
                 <List title='Avoid making bigger sections for solo parts'>The idea is to slice solos into parts where you can train these specific parts and try to connect them while playing.</List>
             </ul>
@@ -483,8 +564,13 @@ export const TrainerSections = () => {
 }
 
 export const CustomChordNames = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'custom-chord-names'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title="Custom Chord Names" anchors={PageAnchors('custom-chord-names')}>
+        <MainComponent id={id} title="Custom Chord Names">
             {/* <Paragraph>
                 You can place custom chord names on any chord with 
             </Paragraph> */}
@@ -493,24 +579,39 @@ export const CustomChordNames = () => {
 }
 
 export const Tunings = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'tunings'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title='Tunings' anchors={PageAnchors('tunings')}>
+        <MainComponent id={id} title='Tunings'>
 
         </MainComponent>
     )
 }
 
 export const Reductions = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'reductions'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title='Reductions' anchors={PageAnchors('reductions')}>
+        <MainComponent id={id} title='Reductions'>
 
         </MainComponent>
     )
 }
 
 export const CommonMAGMAErrors = () => {
+    const Context = useContext(AppContext)
+
+    const id = 'common-magma-errors'
+    Context.setCurrentPage(id)
+
     return (
-        <MainComponent title='Common MAGMA Errors' anchors={PageAnchors('common-magma-errors')}>
+        <MainComponent id={id} title='Common MAGMA Errors'>
 
             <Title id='relatedToGems'>Related to Gems</Title>
             <Window title={

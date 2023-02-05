@@ -1,19 +1,21 @@
 import { Link } from "react-router-dom"
 
-export const MainTextTitle: React.FC<React.PropsWithChildren<MainTextTitleProps>> = ({ children, id }) => {
+export const MainTitle = ({ children, id }: MainTitleProps) => {
+
     return <h1 id={`#${id}`} className="!leading-[1.10] w-full text-2xl tablet-md:text-4xl border-b-2 border-main-white/25 text-left px-4 py-3 mb-4"> {typeof children === 'string' ? children.toUpperCase() : children} </h1>
 }
 
-export const MainTextParagraph: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const MainParagraph = ({ children }: MainParagraphProps) => {
+
     return <p className="font-text text-left">
         {children}
     </p>
 }
 
-export const MainTextBlock: React.FC<React.PropsWithChildren<MainTextBlockProps>> = ({ children, text, bg, measure }) => {
+export const MainBlock = ({ children, text, bg, measure, noMarginLeft, noMarginRight }: MainBlockProps) => {
 
     return (
-        <span className={`inline-flex font-normal font-title py-1 px-2 rounded-sm text-sm mx-1 tracking-normal self-center relative -top-[0.10rem] ${bg ? "" : "bg-cyan-800"} ${text ? text : "text-main-white"}`} style={{
+        <span className={`inline-flex font-normal font-title py-1 px-2 rounded-sm text-sm ${noMarginLeft ? '' : 'ml-1'} ${noMarginRight ? '' : 'mr-1'} tracking-normal self-center relative -top-[0.10rem] ${bg ? "" : "bg-cyan-800"} ${text ? text : "text-main-white"}`} style={{
             backgroundColor: bg ? bg : ""
         }}>
             {measure ? "[XX:X:XXX]" : children}
@@ -21,22 +23,22 @@ export const MainTextBlock: React.FC<React.PropsWithChildren<MainTextBlockProps>
     )
 }
 
-export const MainTextList: React.FC<React.PropsWithChildren<MainTextListProps>> = ({ children, title }) => {
+export const MainList = ({ children, title, decimal }: MainListProps) => {
 
     return (
-        <li className='list-inside list-disc'>
-            <span className="relative -ml-2 z-[-1]" />
+        <li className='list-inside'>
+            <span className={`relative -ml-2 z-[-1] ${decimal ? 'hidden' : ''}`} />
             <strong className="text-cyan-500">{title}:</strong> {children ? children : ""}
         </li>
     )
 }
 
-export const MainTextOptions: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const MainOptions = ({ children }: MainOptionProps) => {
 
-    return <li className="list-inside list-disc mb-0 last:mb-4">{children}</li>
+    return <li className="list-inside mb-0 last:mb-4">{children}</li>
 }
 
-export const MainTextHref: React.FC<React.PropsWithChildren<MainTextHrefProps>> = ({ children, href }) => {
+export const MainHref = ({ children, href }: MainHrefProps) => {
 
     if (href.startsWith("http")) {
         return <a href={href} target="_blank" rel="noreferrer" className='inline text-cyan-500 hover:underline'>{children}</a>
@@ -50,7 +52,7 @@ export const MainTextHref: React.FC<React.PropsWithChildren<MainTextHrefProps>> 
     }
 }
 
-export const MainTextLink: React.FC<React.PropsWithChildren<MainTextLinkProps>> = ({ children, to, title }) => {
+export const MainLink = ({ children, to, title }: MainLinkProps) => {
 
     return (
         <li className='list-inside list-disc'>
@@ -60,7 +62,8 @@ export const MainTextLink: React.FC<React.PropsWithChildren<MainTextLinkProps>> 
     )
 }
 
-export const MainTextWindow: React.FC<React.PropsWithChildren<MainTextWindowProps>> = ({ children, title }) => {
+export const MainWindow = ({ children, title }: MainWindowProps) => {
+    
     return (
         <ul className="bg-neutral-800/90 rounded p-2 mb-4 last:mb-0">
             <li className='list-inside list-disc flex flex-col'>

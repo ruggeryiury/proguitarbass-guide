@@ -3,13 +3,10 @@ import { createContext, useState } from "react"
 export const AppContext = createContext({} as ContextDocument)
 
 const AppProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-
-    const [lang, setLang] = useState('ENG')
-    const [currentPage, setCurrentPage] = useState('index')
+    const [currentPage, setCurrentPage] = useState('Index')
 
     return (
         <AppContext.Provider value={{
-            lang, setLang,
             currentPage, setCurrentPage
         }}>
             {children}

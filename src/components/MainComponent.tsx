@@ -1,23 +1,21 @@
 import { HashLink } from 'react-router-hash-link'
 import { useInView } from 'react-intersection-observer'
 import { BsArrowReturnRight } from 'react-icons/bs'
-import ScrollUpButton from './ScrollUpButton'
+import { TbArrowBigTop } from 'react-icons/tb'
+import PageAnchors from '../services/utils/PageAnchors'
 
-interface MainComponentProps {
-    title: string
-    anchors: AnchorsLinkDocument[]
-}
-
-const MainComponent: React.FC<React.PropsWithChildren<MainComponentProps>> = ({ children, title, anchors }) => {
+const MainComponent = ({ children, id, title}: MainComponentProps) => {
     const [ref, inView] = useInView({
         initialInView: true
     })
+
+    const anchors = PageAnchors(id)
 
     return (
         <>
             <ScrollUpButton show={inView} />
 
-            <main className="flex-col laptop:flex-row w-full landscape:h-[88%] portrait:h-[92%] landscape:laptop:h-[94%] portrait:tablet-md:h-[94%] justify-center overflow-y-auto laptop:overflow-y-hidden animate__animated animate__fadeIn animate__faster">
+            <main className="flex-col laptop:flex-row w-full mobile:landscape:h-[88%] mobile:portrait:h-[92%] laptop:landscape:h-[94%] tablet-md:portrait:h-[94%] justify-center overflow-y-auto laptop:overflow-y-hidden animate__animated animate__fadeIn animate__faster">
                 <div className="hidden laptop:flex h-full w-full laptop:w-[22%] py-6 px-6 tablet-md:px-12 laptop:px-8 border-r-0 laptop:border-r-2 border-main-white/10">
                     <h1 className="!leading-[1.10] text-xl laptop-lg:text-2xl desktop:text-3xl text-left mb-4 w-full pb-2 border-b-2 border-main-white/25">{title.toUpperCase()}</h1>
                     {
@@ -50,7 +48,23 @@ const MainComponent: React.FC<React.PropsWithChildren<MainComponentProps>> = ({ 
             </main>
         </>
     )
+}
 
+export const ScrollUpButton = ({ show }: ScrollUpButtonProps) => {
+
+    const ScrollUp = (ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        const MainComponentContent = document.getElementById('MainComponentContent') as HTMLDivElement
+        MainComponentContent.scrollTo({
+            behavior: 'smooth',
+            top: 0,
+        })
+    }
+
+    return show ? null : (
+        <button aria-label="Scroll to Top" className="flex laptop:hidden fixed z-10 bottom-0 right-0 m-3 border-2 p-1 border-main-white/25 bg-main-black/90 ml-auto rounded-md" onClick={ev=>ScrollUp(ev)}>
+            <TbArrowBigTop />
+        </button>
+    )
 }
 
 export default MainComponent

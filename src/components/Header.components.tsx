@@ -5,21 +5,21 @@ import ProBassIcon from '../assets/images/probass.webp'
 
 export const HeaderTitle = () => {
     return (
-        <Link to="/" className='flex-row items-center h-full group' title="Go back to Main Page">
+        <div className='flex-row items-center h-full group cursor-default'>
             <HeaderIcons src={ProGtrIcon} alt="PRO Guitar Icon" width='1440' height='1439' />
             <HeaderIcons src={ProBassIcon} alt="PRO Bass Icon" className='mr-2' width='1440' height='1439' />
             <h1 className="text-left text-sm laptop-lg:text-base !leading-[1.10] duration-200 group-hover:drop-shadow-[0_2px_2px_rgba(255,255,255,0.3)]">RUGGY'S PRO GUITAR/BASS GUIDE</h1>
-        </Link>
+        </div>
     )
 }
 
-export const HeaderIcons: React.FC<HeaderIconsProps> = ({ src, alt, width, height, className }) => {
+export const HeaderIcons = ({ src, alt, width, height, className }: HeaderIconsProps) => {
     return (
         <img src={src} alt={alt} className={`w-6 ${className ? className : ""}`} width={width} height={height} />
     )
 }
 
-export const ButtonArea: React.FC<React.PropsWithChildren<HeaderButtonAreaProps>> = ({ children, title, size }) => {
+export const ButtonArea = ({ children, title, size }: React.PropsWithChildren<HeaderButtonAreaProps>) => {
     const [dropdownActive, setDropdownState] = useState(false)
 
     return (
@@ -38,7 +38,7 @@ export const ButtonArea: React.FC<React.PropsWithChildren<HeaderButtonAreaProps>
     )
 }
 
-export const HeaderDropdownButtons: React.FC<HeaderDropdownButtonsProps> = ({ title, url }) => {
+export const HeaderDropdownButtons = ({ title, url }: HeaderDropdownButtonsProps) => {
     return (
         <Link to={url} className='rounded-md last:mb-0 leading-none py-4 font-condensed hover:bg-[#262626] px-4 mb-1 border-2 border-main-white/5'>{title}</Link>
     )

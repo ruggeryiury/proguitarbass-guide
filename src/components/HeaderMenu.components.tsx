@@ -1,10 +1,8 @@
+import { useContext } from "react"
 import { Link } from "react-router-dom"
+import { AppContext } from "../app/AppProvider"
 
-export const HeaderMenuIndexLink: React.FC<HeaderMenuCloseActionProps> = ({ action }) => {
-    return <Link to="/" onClick={ev => action(false)} className='leading-none text-start text-2xl mb-4'>RUGGY'S PRO GUITAR/BASS GUIDE</Link>
-}
-
-export const HeaderMenuTopic: React.FC<React.PropsWithChildren<HeaderMenuTopicProps>> = ({ title, children }) => {
+export const HeaderMenuTopic = ({ title, children }: HeaderMenuTopicProps) => {
     return (
         <>
             <h2 className="border-b border-main-white w-full text-left pl-1 text-lg mb-2">{title.toUpperCase()}</h2>
@@ -15,6 +13,9 @@ export const HeaderMenuTopic: React.FC<React.PropsWithChildren<HeaderMenuTopicPr
     )
 }
 
-export const HeaderMenuTopicLink: React.FC<React.PropsWithChildren<HeaderMenuTopicLinkProps>> = ({ children, action, to }) => {
-    return <Link to={to} onClick={ev => action(false)} className='w-fit pl-4 text-left leading-none mb-2 last:mb-4'>{(children as string).toUpperCase()}</Link>
+export const HeaderMenuTopicLink = ({ children, action, to, index }: HeaderMenuTopicLinkProps) => {
+    const Context = useContext(AppContext)
+
+    const id = index ? 'index' : to.slice(1)
+    return <Link to={to} onClick={ev => action(false)} className={`w-fit pl-4 my-1 text-left leading-none mb-2 last:mb-4 ${Context.currentPage === id ? 'text-cyan-500' : 'text-neutral-300'}`}>{(children as string).toUpperCase()}</Link>
 }

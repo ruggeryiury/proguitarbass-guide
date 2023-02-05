@@ -21,14 +21,12 @@ interface HeaderMenuProps {
     setHeaderMenu: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-interface HeaderMenuCloseActionProps {
-    action: React.Dispatch<React.SetStateAction<boolean>>
-}
-
-interface HeaderMenuTopicProps {
+interface HeaderMenuTopicProps extends React.PropsWithChildren {
     title: string
 }
 
-interface HeaderMenuTopicLinkProps extends HeaderMenuCloseActionProps {
+interface HeaderMenuTopicLinkProps extends React.PropsWithChildren {
+    action: React.Dispatch<React.SetStateAction<boolean>>
     to: string
+    index?: boolean
 }
