@@ -83,7 +83,7 @@ tr {
     @apply mobile:w-2 tablet-md:w-3;
 }
 ::-webkit-scrollbar-track {
-    @apply bg-white/[.05];
+    @apply bg-white/5;
 }
 ::-webkit-scrollbar-thumb {
     @apply bg-white/[.15] hover:bg-white/[.25] rounded-sm;
