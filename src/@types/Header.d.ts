@@ -14,6 +14,7 @@ interface HeaderButtonAreaProps {
 interface HeaderDropdownButtonsProps {
     title: string
     url: string
+    index?: boolean
 }
 
 interface HeaderMenuProps {

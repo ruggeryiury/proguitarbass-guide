@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 import ProGtrIcon from '../assets/images/progtr.webp'
 import ProBassIcon from '../assets/images/probass.webp'
+import { AppContext } from "../app/AppProvider"
 
 export const HeaderTitle = () => {
     return (
@@ -38,8 +39,17 @@ export const ButtonArea = ({ children, title, size }: React.PropsWithChildren<He
     )
 }
 
-export const HeaderDropdownButtons = ({ title, url }: HeaderDropdownButtonsProps) => {
-    return (
-        <Link to={url} className='rounded-md last:mb-0 leading-none py-4 font-condensed hover:bg-[#262626] px-4 mb-1 border-2 border-main-white/5'>{title}</Link>
-    )
+export const HeaderDropdownButtons = ({ title, url, index }: HeaderDropdownButtonsProps) => {
+    const Context = useContext(AppContext)
+    const id = index ? 'index' : url.slice(1)
+
+    if (Context.currentPage === id) {
+        return (
+            <div className='rounded-md last:mb-0 leading-none py-4 font-condensed bg-[#262626] px-4 mb-1 border-2 border-main-white/5 cursor-default'>{title}</div>
+        )
+    } else {
+        return (
+            <Link to={url} className='rounded-md last:mb-0 leading-none py-4 font-condensed hover:bg-[#262626] px-4 mb-1 border-2 border-main-white/5'>{title}</Link>
+        )
+    }
 }

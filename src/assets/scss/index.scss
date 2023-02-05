@@ -49,7 +49,7 @@ body {
     @apply bg-[url('../images/background.webp')] subpixel-antialiased flex flex-col items-center w-full bg-fixed  bg-top bg-cover bg-no-repeat text-center text-main-white text-base font-title;
 }
 #root {
-    @apply bg-main-black/[.97] flex flex-col items-center w-full h-screen ;
+    @apply bg-main-black/[.97] flex flex-col items-center w-full h-screen;
 }
 div,
 main,
@@ -63,7 +63,9 @@ p,
 li {
     @apply pl-2 pr-4 font-text text-left text-lg tracking-tight cursor-text mb-4 last:mb-0;
 }
-table, th, td {
+table,
+th,
+td {
     @apply border-b border-main-white/50 text-left p-2;
 }
 table {
@@ -74,4 +76,15 @@ th {
 }
 tr {
     @apply even:bg-main-white/5;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+    @apply mobile:w-2 tablet-md:w-3;
+}
+::-webkit-scrollbar-track {
+    @apply bg-white/[.05];
+}
+::-webkit-scrollbar-thumb {
+    @apply bg-white/[.15] hover:bg-white/[.25] rounded-sm;
 }

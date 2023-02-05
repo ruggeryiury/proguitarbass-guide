@@ -10,12 +10,12 @@ const Header = () => {
     return (
         <>
             <HeaderMenu activated={headerMenu} setHeaderMenu={setHeaderMenu} />
-            <header className='relative z-10 w-full mobile:landscape:h-[12%] mobile:portrait:h-[8%] laptop:landscape:h-[6%] tablet-md:portrait:h-[6%] bg-[#222] bg-[url("../../assets/images/pattern-transparency-sm.webp")] bg-[length:128px] outline outline-2 outline-main-white/25 animate-patternMove'>
+            <header className='relative z-10 w-full mobile:landscape:h-[12%] mobile:portrait:h-[8%] laptop:landscape:h-[6%] tablet-md:portrait:h-[6%] bg-[#222] bg-[url("../../assets/images/pattern-transparency-sm.webp")] bg-[length:128px] border-b border-main-white/20 shadow-[0px_8px_24px_0px_rgba(0,0,0,1)] animate-patternMove' >
                 <div className='h-full bg-gradient-to-t from-transparent to-[#111] flex-row w-full items-center px-4'>
                     <HeaderTitle />
                     <div className='hidden laptop:flex flex-row ml-auto h-full'>
                         <ButtonArea title="Basics">
-                            <HeaderDropdownButtons title="Getting Started" url="/" />
+                            <HeaderDropdownButtons index title="Getting Started" url="/" />
                             <HeaderDropdownButtons title="Notes" url="/notes" />
                             <HeaderDropdownButtons title="Chords" url="/chords" />
                             <HeaderDropdownButtons title="Left Hand Position" url="/left-hand-position" />

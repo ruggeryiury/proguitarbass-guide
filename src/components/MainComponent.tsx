@@ -24,7 +24,7 @@ const MainComponent = ({ children, id, title}: MainComponentProps) => {
                         })
                     }
                 </div>
-                <div id='MainComponentContent' className="h-full w-[100%] laptop-lg:w-[88%] px-6 tablet-md:px-12 py-4 tablet-md:py-8 overflow-y-auto">
+                <div id='MainComponentContent' className="h-full w-[100%] laptop-lg:w-[88%] px-6 tablet-md:px-12 py-4 tablet-md:py-8 overflow-y-auto shadow-[inset_0px_16px_24px_0px_rgba(0,0,0,1)]">
                     <div className='flex laptop:hidden text-left' ref={ref}>
                         <h1 className="!leading-[1.10] w-full text-2xl tablet-md:text-4xl border-b-2 border-main-white/25 text-left py-3 mb-4">{title.toUpperCase()}</h1>
                         {

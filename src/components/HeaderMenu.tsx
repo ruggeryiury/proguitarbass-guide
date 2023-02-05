@@ -1,10 +1,8 @@
-import { useContext, useEffect } from "react"
+import { useEffect } from "react"
 import { IoCloseSharp } from 'react-icons/io5'
-import { AppContext } from "../app/AppProvider"
 import { HeaderMenuTopic as Topic, HeaderMenuTopicLink as TopicLink } from "./HeaderMenu.components"
 
 const HeaderMenu = ({ activated, setHeaderMenu }: HeaderMenuProps) => {
-    const Context = useContext(AppContext)
 
     useEffect(() => {
 

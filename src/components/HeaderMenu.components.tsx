@@ -17,5 +17,5 @@ export const HeaderMenuTopicLink = ({ children, action, to, index }: HeaderMenuT
     const Context = useContext(AppContext)
 
     const id = index ? 'index' : to.slice(1)
-    return <Link to={to} onClick={ev => action(false)} className={`w-fit pl-4 my-1 text-left leading-none mb-2 last:mb-4 ${Context.currentPage === id ? 'text-cyan-500' : 'text-neutral-300'}`}>{(children as string).toUpperCase()}</Link>
+    return <Link to={to} onClick={ev => action(false)} className={`w-fit pl-4 my-1 text-left leading-none mb-2 last:mb-4 ${Context.currentPage === id ? 'text-cyan-500 drop-shadow-[0_2px_2px_#007fff2f]' : 'text-neutral-300'}`} >{(children as string).toUpperCase()}</Link>
 }

@@ -1,10 +1,10 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Link } from "react-router-dom"
 import Header from "../components/Header"
 import ErrorPage from "../pages/ErrorPage"
 import * as MainPages from '../pages/MainPages'
 
 const MainRouter = () => {
-    
+
     return (
         <>
             <Header />
@@ -33,7 +33,13 @@ const MainRouter = () => {
                 <Route path='/custom-chord-names' element={<MainPages.CustomChordNames />} />
 
                 (Mastering)
-                <Route path='/tunings' element={<MainPages.Tunings />} />
+                <Route
+                    path='/tunings/*'
+                    element={
+                        <Routes>
+                            <Route index element={<MainPages.Tunings />} />
+                        </Routes>
+                    } />
                 <Route path='/reductions' element={<MainPages.Reductions />} />
                 <Route path='/common-magma-errors' element={<MainPages.CommonMAGMAErrors />} />
 
