@@ -83,6 +83,18 @@ const PageAnchors = (id: string): AnchorsLinkDocument[] => {
             }
         ]
 
+    } else if (id === 'trill-tremolo') {
+        return [
+            {
+                title: "MIDI Notes",
+                id: "midiNotes"
+            },
+            {
+                title: "On Hard Difficulty",
+                id: "onHardDifficulty"
+            }
+        ]
+
     } else if (id === 'note-encodings') {
         return [
             {
@@ -118,7 +130,7 @@ const PageAnchors = (id: string): AnchorsLinkDocument[] => {
                 title: "For PRO Guitar",
                 id: "forProGuitar"
             },
-            
+
             {
                 title: "For PRO Bass",
                 id: "forProBass"

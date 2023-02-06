@@ -1,5 +1,5 @@
 // React-related imports
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { AppContext } from "../app/AppProvider"
 
 // Main components
@@ -9,12 +9,15 @@ import { MainParagraph as Paragraph, MainTitle as Title, MainOptions as Options,
 // Left Hand Position images
 import IndexFingerExampleImg from '../assets/images/index-finger.webp'
 import IndexFingerExampleImgMobile from '../assets/images/index-finger-mobile.webp'
+import { GuitarTuning } from "../classes/Tuning.classes"
 
 export const Index = () => {
     const Context = useContext(AppContext)
-
     const id = 'index'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title="Getting Started">
@@ -70,9 +73,11 @@ export const Index = () => {
 
 export const Notes = () => {
     const Context = useContext(AppContext)
-
     const id = 'notes'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title='Notes'>
@@ -101,9 +106,11 @@ export const Notes = () => {
 
 export const Chords = () => {
     const Context = useContext(AppContext)
-
     const id = 'chords'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title='Chords'>
@@ -211,9 +218,11 @@ export const Chords = () => {
 
 export const LeftHandPosition = () => {
     const Context = useContext(AppContext)
-
     const id = 'left-hand-position'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title='Left Hand Position'>
@@ -242,9 +251,11 @@ export const LeftHandPosition = () => {
 
 export const MutedNotesAndChords = () => {
     const Context = useContext(AppContext)
-
     const id = 'muted-notes-and-chords'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title="Muted Notes & Chords">
@@ -261,9 +272,11 @@ export const MutedNotesAndChords = () => {
 
 export const HOPO = () => {
     const Context = useContext(AppContext)
-
     const id = 'hopo'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title="Hammer-Ons & Pull-Offs">
@@ -287,9 +300,11 @@ export const HOPO = () => {
 
 export const Slide = () => {
     const Context = useContext(AppContext)
-
     const id = 'slide'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title="Slide Markers">
@@ -335,9 +350,11 @@ export const Slide = () => {
 
 export const Arpeggio = () => {
     const Context = useContext(AppContext)
-
     const id = 'arpeggio'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title="Arpeggio Markers">
@@ -364,9 +381,11 @@ export const Arpeggio = () => {
 
 export const StrummingPattern = () => {
     const Context = useContext(AppContext)
-
     const id = 'strumming-pattern'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title='Strumming Pattern Markers'>
@@ -387,9 +406,11 @@ export const StrummingPattern = () => {
 
 export const ForceChordNumbering = () => {
     const Context = useContext(AppContext)
-
     const id = 'force-chord-numbering'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title='Force Chord Numbering'>
@@ -401,14 +422,33 @@ export const ForceChordNumbering = () => {
 
 export const TrillTremolo = () => {
     const Context = useContext(AppContext)
-
     const id = 'trill-tremolo'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title='Trill & Tremolo Markers'>
             <Paragraph>
+                Trill and Tremolo markers trigger free form lanes that appear on the track. These markers allow a a player to strum or play quickly without forcing them to playing the actual authored rhythm of the part. As long as the player is strumming or alternating at 160ms or faster, they will be allowed to continue playing in the free form lanes. If they dip below 160ms, the free form lanes will disappear, and they will be forced to play to the rhythm at which the part is authored.
+                <br /><br />
+                The threshold of 160ms is a hard coded number, so edge cases can creep up where using a trill marker may not feel as good as just playing the authored rhythm. Using Trill and Tremolo lanes as opposed to an authored section is a judgement call, but in general if the original playing happens very fast and without regard to tempo, if it would be very difficult to match the audio, or if there would be a very long stretch of 16th or 32nd notes it might be a good candidate for a trill or tremolo section.
+            </Paragraph>
 
+            <Title id='midiNotes'>MIDI Notes</Title>
+            <ul className="list-disc">
+                <Options>
+                    <strong className="text-cyan-500">TREMOLO MARKERS</strong> are placed on MIDI note <Block>F♯8</Block> and are used on fast, odd rhythm strumming sections.
+                </Options>
+                <Options>
+                    <strong className="text-cyan-500">TRILL MARKERS</strong> are placed on MIDI note <Block>G8</Block> and are used on two rapid notes across two different frets.
+                </Options>
+            </ul>
+
+            <Title id='onHardDifficulty'>On Hard Difficulty</Title>
+            <Paragraph>
+                Both <strong className="text-cyan-500">TREMOLO</strong> and <strong className="text-cyan-500">TRILL MARKERS</strong> can be placed on Hard difficulty if you place these markers under velocity 40.
             </Paragraph>
         </MainComponent>
     )
@@ -416,9 +456,11 @@ export const TrillTremolo = () => {
 
 export const NoteEncodings = () => {
     const Context = useContext(AppContext)
-
     const id = 'note-encodings'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title='Note Encodings'>
@@ -473,9 +515,11 @@ export const NoteEncodings = () => {
 
 export const OverdrivesSolosBRE = () => {
     const Context = useContext(AppContext)
-    
     const id = 'overdrive-solo-bre'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title='Overdrives, Solos & BRE'>
@@ -508,9 +552,11 @@ export const OverdrivesSolosBRE = () => {
 
 export const TrainerSections = () => {
     const Context = useContext(AppContext)
-
     const id = 'trainer-sections'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title="Trainer Sections">
@@ -565,9 +611,11 @@ export const TrainerSections = () => {
 
 export const CustomChordNames = () => {
     const Context = useContext(AppContext)
-
     const id = 'custom-chord-names'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title="Custom Chord Names">
@@ -580,9 +628,11 @@ export const CustomChordNames = () => {
 
 export const Tunings = () => {
     const Context = useContext(AppContext)
-
     const id = 'tunings'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title='Tunings'>
@@ -593,22 +643,27 @@ export const Tunings = () => {
 
 export const Reductions = () => {
     const Context = useContext(AppContext)
-
     const id = 'reductions'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title='Reductions'>
-
+            <Paragraph>
+            </Paragraph>
         </MainComponent>
     )
 }
 
 export const CommonMAGMAErrors = () => {
     const Context = useContext(AppContext)
-
     const id = 'common-magma-errors'
-    Context.setCurrentPage(id)
+
+    useEffect(() => {
+        Context.setCurrentPage(id)
+    })
 
     return (
         <MainComponent id={id} title='Common MAGMA Errors'>
