@@ -31,13 +31,13 @@ const Header = () => {
                         </ButtonArea>
                         <ButtonArea title="Events">
                             <HeaderDropdownButtons title="Note Encodings" url="/note-encodings" />
-                            <HeaderDropdownButtons title="Overdrive, Solo & BRE" url="/overdrives-solos-bre" />
+                            <HeaderDropdownButtons title="Overdrive, Solo & BRE" url="/overdrive-solo-bre" />
                             <HeaderDropdownButtons title="Trainer Sections" url="/trainer-sections" />
                             <HeaderDropdownButtons title="Custom Chord Names" url="/custom-chord-names" />
                         </ButtonArea>
                         <ButtonArea title="Mastering">
                             <HeaderDropdownButtons title="Tunings" url="/tunings" />
-                            <HeaderDropdownButtons title="Reductions" url="/reductions" />
+                            <HeaderDropdownButtons title="Authoring Rules" url="/authoring-rules" />
                             <HeaderDropdownButtons title="Common MAGMA Errors" url="/common-magma-errors" />
                         </ButtonArea>
                     </div>

@@ -1,11 +1,25 @@
+interface MainPagesConfigContentProps {
+    index?: boolean
+    title: string,
+    url: string,
+    type: string,
+    anchors?: AnchorsLinkDocument[]
+}
+
 interface AnchorsLinkDocument {
     title: string
     id: string
 }
 
-const PageAnchors = (id: string): AnchorsLinkDocument[] => {
-    if (id === 'index') {
-        return [
+const MainPagesConfig: { [key: string]: MainPagesConfigContentProps } = {
+
+    // Basics
+    index: {
+        index: true,
+        title: 'Getting Started',
+        url: '/',
+        type: 'basics',
+        anchors: [
             {
                 title: "Introduction",
                 id: "introduction"
@@ -19,9 +33,12 @@ const PageAnchors = (id: string): AnchorsLinkDocument[] => {
                 id: "preparingYourReaperProject"
             }
         ]
-
-    } else if (id === 'notes') {
-        return [
+    },
+    notes: {
+        title: 'Notes',
+        url: '/notes',
+        type: 'basics',
+        anchors: [
             {
                 title: "Strings",
                 id: "strings"
@@ -31,9 +48,12 @@ const PageAnchors = (id: string): AnchorsLinkDocument[] => {
                 id: "frets"
             }
         ]
-
-    } else if (id === 'chords') {
-        return [
+    },
+    chords: {
+        title: 'Chords',
+        url: '/chords',
+        type: 'basics',
+        anchors: [
             {
                 title: "Root Note Indicators",
                 id: "rootNoteIndicators"
@@ -55,9 +75,12 @@ const PageAnchors = (id: string): AnchorsLinkDocument[] => {
                 id: "sharpFlatSwap"
             }
         ]
-
-    } else if (id === 'left-hand-position') {
-        return [
+    },
+    'left-hand-position': {
+        title: 'Left Hand Position',
+        url: '/left-hand-position',
+        type: 'basics',
+        anchors: [
             {
                 title: "Concept",
                 id: "concept"
@@ -67,9 +90,24 @@ const PageAnchors = (id: string): AnchorsLinkDocument[] => {
                 id: "usesOnCustomSongs"
             }
         ]
+    },
 
-    } else if (id === 'slide') {
-        return [
+    // Notes & Markers
+    'muted-notes-and-chords': {
+        title: 'Muted Notes & Chords',
+        url: '/muted-notes-and-chords',
+        type: 'notes-and-markers'
+    },
+    hopo: {
+        title: 'Hammer-Ons & Pull-Offs',
+        url: '/hopo',
+        type: 'notes-and-markers'
+    },
+    slide: {
+        title: 'Slide Markers',
+        url: '/slide',
+        type: 'notes-and-markers',
+        anchors: [
             {
                 title: "Slide Direction Rules",
                 id: "slideDirectionRules"
@@ -87,9 +125,27 @@ const PageAnchors = (id: string): AnchorsLinkDocument[] => {
                 id: "behaviorWithChords"
             }
         ]
-
-    } else if (id === 'trill-tremolo') {
-        return [
+    },
+    arpeggio: {
+        title: 'Arpeggio Markers',
+        url: '/arpeggio',
+        type: 'notes-and-markers'
+    },
+    'strumming-pattern': {
+        title: 'Strumming Pattern Markers',
+        url: '/strumming-pattern',
+        type: 'notes-and-markers'
+    },
+    'force-chord-numbering': {
+        title: 'Force Chord Numbering',
+        url: '/force-chord-numbering',
+        type: 'notes-and-markers'
+    },
+    'trill-tremolo': {
+        title: 'Trill & Tremolo Markers',
+        url: '/trill-tremolo',
+        type: 'notes-and-markers',
+        anchors: [
             {
                 title: "MIDI Notes",
                 id: "midiNotes"
@@ -99,9 +155,14 @@ const PageAnchors = (id: string): AnchorsLinkDocument[] => {
                 id: "onHardDifficulty"
             }
         ]
+    },
 
-    } else if (id === 'note-encodings') {
-        return [
+    // Events
+    'note-encodings': {
+        title: 'Note Encodings',
+        url: '/note-encodings',
+        type: 'events',
+        anchors: [
             {
                 title: "Channel Used on Notes",
                 id: "channelUsedOnNotes"
@@ -112,9 +173,12 @@ const PageAnchors = (id: string): AnchorsLinkDocument[] => {
                 id: "channelUsedOnMarkers"
             }
         ]
-
-    } else if (id === 'overdrive-solo-bre') {
-        return [
+    },
+    'overdrive-solo-bre': {
+        title: 'Overdrive, Solo & BRE',
+        url: '/overdrive-solo-bre',
+        type: 'events',
+        anchors: [
             {
                 title: "Overdrive",
                 id: "overdrive"
@@ -128,9 +192,12 @@ const PageAnchors = (id: string): AnchorsLinkDocument[] => {
                 id: "bigRockEndings"
             }
         ]
-
-    } else if (id === 'trainer-sections') {
-        return [
+    },
+    'trainer-sections': {
+        title: 'Trainer Sections',
+        url: '/trainer-sections',
+        type: 'events',
+        anchors: [
             {
                 title: "For PRO Guitar",
                 id: "forProGuitar"
@@ -149,8 +216,29 @@ const PageAnchors = (id: string): AnchorsLinkDocument[] => {
                 id: "rules"
             }
         ]
-    } else if (id === 'common-magma-errors') {
-        return [
+    },
+    'custom-chord-names': {
+        title: 'Custom Chord Names',
+        url: '/custom-chord-names',
+        type: 'events'
+    },
+
+    // Mastering
+    tunings: {
+        title: 'Tunings',
+        url: '/tunings',
+        type: 'mastering'
+    },
+    'authoring-rules': {
+        title: '',
+        url: '/authoring-rules',
+        type: 'mastering'
+    },
+    'common-magma-errors': {
+        title: 'Common MAGMA Errors',
+        url: '/common-magma-errors',
+        type: 'mastering',
+        anchors: [
             {
                 title: "Related to Gems",
                 id: "relatedToGems"
@@ -176,9 +264,7 @@ const PageAnchors = (id: string): AnchorsLinkDocument[] => {
                 id: "otherErrors"
             }
         ]
-    } else {
-        return []
     }
 }
 
-export default PageAnchors
+export default MainPagesConfig

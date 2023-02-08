@@ -1,9 +1,9 @@
 import { createContext, useState } from "react"
 
-export const AppContext = createContext({} as ContextDocument)
+export const AppContext = createContext({} as ContextProps)
 
-const AppProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-    const [currentPage, setCurrentPage] = useState('Index')
+const AppProvider = ({ children }: React.PropsWithChildren) => {
+    const [currentPage, setCurrentPage] = useState('index')
 
     return (
         <AppContext.Provider value={{

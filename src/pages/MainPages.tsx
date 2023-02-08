@@ -9,7 +9,6 @@ import { MainParagraph as Paragraph, MainTitle as Title, MainOptions as Options,
 // Left Hand Position images
 import IndexFingerExampleImg from '../assets/images/index-finger.webp'
 import IndexFingerExampleImgMobile from '../assets/images/index-finger-mobile.webp'
-import { GuitarTuning } from "../classes/Tuning.classes"
 
 export const Index = () => {
     const Context = useContext(AppContext)
@@ -513,7 +512,7 @@ export const NoteEncodings = () => {
     )
 }
 
-export const OverdrivesSolosBRE = () => {
+export const OverdriveSoloBRE = () => {
     const Context = useContext(AppContext)
     const id = 'overdrive-solo-bre'
 
@@ -522,7 +521,7 @@ export const OverdrivesSolosBRE = () => {
     })
 
     return (
-        <MainComponent id={id} title='Overdrives, Solos & BRE'>
+        <MainComponent id={id} title='Overdrive, Solo & BRE'>
             <Paragraph>
                 <em>Overdrives</em>, <em>Solo markers</em>, and <em>Big Rock Endings</em> <strong>must match</strong> the 5-lane Guitar/Bass sections. If you already have 5-lane Guitar/Bass parts authored, just copy and paste on the PRO Guitar/Bass tracks.
             </Paragraph>
@@ -641,16 +640,16 @@ export const Tunings = () => {
     )
 }
 
-export const Reductions = () => {
+export const AuthoringRules = () => {
     const Context = useContext(AppContext)
-    const id = 'reductions'
+    const id = 'authoring-rules'
 
     useEffect(() => {
         Context.setCurrentPage(id)
     })
 
     return (
-        <MainComponent id={id} title='Reductions'>
+        <MainComponent id={id} title='Authoring Rules'>
             <Paragraph>
             </Paragraph>
         </MainComponent>

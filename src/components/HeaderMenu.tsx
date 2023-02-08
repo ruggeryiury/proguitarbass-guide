@@ -68,7 +68,7 @@ const HeaderMenu = ({ activated, setHeaderMenu }: HeaderMenuProps) => {
 
                 <Topic title='Mastering'>
                     <TopicLink to='/tunings' action={setHeaderMenu}>Tunings</TopicLink>
-                    <TopicLink to='/reductions' action={setHeaderMenu}>Reductions</TopicLink>
+                    <TopicLink to='/authoring-rules' action={setHeaderMenu}>Authoring Rules</TopicLink>
                     <TopicLink to='/common-magma-errors' action={setHeaderMenu}>Common MAGMA Errors</TopicLink>
                 </Topic>
             </div>
