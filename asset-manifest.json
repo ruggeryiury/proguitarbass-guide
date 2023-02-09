@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/proguitarbass-guide/static/css/main.5dc36867.css",
-    "main.js": "/proguitarbass-guide/static/js/main.a1971e34.js",
+    "main.js": "/proguitarbass-guide/static/js/main.a1d00447.js",
     "static/media/index-finger.webp": "/proguitarbass-guide/static/media/index-finger.2fe19b5eb2298be474d0.webp",
     "static/media/index-finger-mobile.webp": "/proguitarbass-guide/static/media/index-finger-mobile.50a01a1a58af2010c075.webp",
     "static/media/background.webp": "/proguitarbass-guide/static/media/background.64d384e5878ab3ec4412.webp",
@@ -16,10 +16,10 @@
     "static/media/pattern-transparency-sm.webp": "/proguitarbass-guide/static/media/pattern-transparency-sm.cc265f0ff77ba4d4d775.webp",
     "index.html": "/proguitarbass-guide/index.html",
     "main.5dc36867.css.map": "/proguitarbass-guide/static/css/main.5dc36867.css.map",
-    "main.a1971e34.js.map": "/proguitarbass-guide/static/js/main.a1971e34.js.map"
+    "main.a1d00447.js.map": "/proguitarbass-guide/static/js/main.a1d00447.js.map"
   },
   "entrypoints": [
     "static/css/main.5dc36867.css",
-    "static/js/main.a1971e34.js"
+    "static/js/main.a1d00447.js"
   ]
 }
