@@ -1,8 +1,12 @@
 import { useEffect } from "react"
 import { IoCloseSharp } from 'react-icons/io5'
 import { HeaderMenuTopic as Topic, HeaderMenuTopicLink as TopicLink } from "./HeaderMenu.components"
+import HeaderConfig from '../services/constants/HeaderConfig'
+import MainPagesConfig from "../services/constants/MainPagesConfig"
 
 const HeaderMenu = ({ activated, setHeaderMenu }: HeaderMenuProps) => {
+
+    const PageNames = Object.keys(MainPagesConfig)
 
     useEffect(() => {
 
@@ -42,34 +46,40 @@ const HeaderMenu = ({ activated, setHeaderMenu }: HeaderMenuProps) => {
             <div id='HeaderMenuContent' style={{ left: '-100%' }} className='fixed items-start bg-gradient-to-br from-[#111]/90 to-[#121217]/90 z-30 w-[90%] h-screen duration-300 px-4 py-4 overflow-y-auto'>
                 <h1 className="leading-none text-start text-2xl mb-4 uppercase">Ruggy's PRO Guitar/Bass Guide</h1>
 
-                <Topic title="Basics">
-                    <TopicLink index to='/' action={setHeaderMenu}>Getting Started</TopicLink>
-                    <TopicLink to='/notes' action={setHeaderMenu}>Notes</TopicLink>
-                    <TopicLink to='/chords' action={setHeaderMenu}>Chords</TopicLink>
-                    <TopicLink to='/left-hand-position' action={setHeaderMenu}>Left Hand Position</TopicLink>
+                <Topic title={HeaderConfig.basics.title}>
+                    {
+                        PageNames.map((value, index) => {
+                            const content = MainPagesConfig[value]
+                            return content.type === 'basics' ? <TopicLink key={`basicsButtonMobile${index}`} index={content.index ? true : false} to={content.url} action={setHeaderMenu}>{content.title}</TopicLink> : null
+                        })
+                    }
                 </Topic>
 
-                <Topic title='Notes & Markers'>
-                    <TopicLink to='/muted-notes-and-chords' action={setHeaderMenu}>Muted Notes & Chords</TopicLink>
-                    <TopicLink to='/hopo' action={setHeaderMenu}>Hammer-ons & Pull-offs</TopicLink>
-                    <TopicLink to='/slide' action={setHeaderMenu}>Slide Markers</TopicLink>
-                    <TopicLink to='/arpeggio' action={setHeaderMenu}>Arpeggio Markers</TopicLink>
-                    <TopicLink to='/strumming-pattern' action={setHeaderMenu}>Strumming Pattern Markers</TopicLink>
-                    <TopicLink to='/force-chord-numbering' action={setHeaderMenu}>Force Chord Numbering</TopicLink>
-                    <TopicLink to='/trill-tremolo' action={setHeaderMenu}>Trill & Tremolo Markers</TopicLink>
+                <Topic title={HeaderConfig['notes-and-markers'].title}>
+                    {
+                        PageNames.map((value, index) => {
+                            const content = MainPagesConfig[value]
+                            return content.type === 'notes-and-markers' ? <TopicLink key={`notesAndMarkersButtonMobile${index}`} index={content.index ? true : false} to={content.url} action={setHeaderMenu}>{content.title}</TopicLink> : null
+                        })
+                    }
                 </Topic>
 
-                <Topic title='Events'>
-                    <TopicLink to='/note-encodings' action={setHeaderMenu}>Note Encodings</TopicLink>
-                    <TopicLink to='/overdrive-solo-bre' action={setHeaderMenu}>Overdrive, Solo & BRE</TopicLink>
-                    <TopicLink to='/trainer-sections' action={setHeaderMenu}>Trainer Sections</TopicLink>
-                    <TopicLink to='/custom-chord-names' action={setHeaderMenu}>Custom Chord Names</TopicLink>
+                <Topic title={HeaderConfig.events.title}>
+                    {
+                        PageNames.map((value, index) => {
+                            const content = MainPagesConfig[value]
+                            return content.type === 'events' ? <TopicLink key={`eventsButtonMobile${index}`} index={content.index ? true : false} to={content.url} action={setHeaderMenu}>{content.title}</TopicLink> : null
+                        })
+                    }
                 </Topic>
 
-                <Topic title='Mastering'>
-                    <TopicLink to='/tunings' action={setHeaderMenu}>Tunings</TopicLink>
-                    <TopicLink to='/authoring-rules' action={setHeaderMenu}>Authoring Rules</TopicLink>
-                    <TopicLink to='/common-magma-errors' action={setHeaderMenu}>Common MAGMA Errors</TopicLink>
+                <Topic title={HeaderConfig.mastering.title}>
+                    {
+                        PageNames.map((value, index) => {
+                            const content = MainPagesConfig[value]
+                            return content.type === 'mastering' ? <TopicLink key={`masteringButtonMobile${index}`} index={content.index ? true : false} to={content.url} action={setHeaderMenu}>{content.title}</TopicLink> : null
+                        })
+                    }
                 </Topic>
             </div>
         </>

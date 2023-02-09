@@ -2,10 +2,13 @@ import { useState } from 'react'
 import { FiMenu } from 'react-icons/fi'
 import { HeaderTitle, ButtonArea, HeaderDropdownButtons } from './Header.components'
 import HeaderMenu from './HeaderMenu'
+import HeaderConfig from '../services/constants/HeaderConfig'
+import MainPagesConfig from "../services/constants/MainPagesConfig"
 
 const Header = () => {
 
     const [headerMenu, setHeaderMenu] = useState(false)
+    const PageNames = Object.keys(MainPagesConfig)
 
     return (
         <>
@@ -14,31 +17,37 @@ const Header = () => {
                 <div className='h-full bg-gradient-to-t from-transparent to-[#111] flex-row w-full items-center px-4'>
                     <HeaderTitle />
                     <div className='hidden laptop:flex flex-row ml-auto h-full'>
-                        <ButtonArea title="Basics">
-                            <HeaderDropdownButtons index title="Getting Started" url="/" />
-                            <HeaderDropdownButtons title="Notes" url="/notes" />
-                            <HeaderDropdownButtons title="Chords" url="/chords" />
-                            <HeaderDropdownButtons title="Left Hand Position" url="/left-hand-position" />
+                        <ButtonArea title={HeaderConfig.basics.title}>
+                            {
+                                PageNames.map((value, index) => {
+                                    const content = MainPagesConfig[value]
+                                    return content.type === 'basics' ? <HeaderDropdownButtons key={`basicsButtonLaptop${index}`} index={content.index ? true : false} title={content.title} url={content.url} /> : null
+                                })
+                            }
                         </ButtonArea>
-                        <ButtonArea title="Notes & Markers">
-                            <HeaderDropdownButtons title="Muted Notes & Chords" url="/muted-notes-and-chords" />
-                            <HeaderDropdownButtons title="Hammer-ons & Pull-offs" url="/hopo" />
-                            <HeaderDropdownButtons title="Slide Markers" url="/slide" />
-                            <HeaderDropdownButtons title="Arpeggio Markers" url="/arpeggio" />
-                            <HeaderDropdownButtons title="Strumming Pattern Markers" url="/strumming-pattern" />
-                            <HeaderDropdownButtons title="Force Chord Numbering" url="/force-chord-numbering" />
-                            <HeaderDropdownButtons title='Trill & Tremolo Markers' url='/trill-tremolo' />
+                        <ButtonArea title={HeaderConfig['notes-and-markers'].title}>
+                            {
+                                PageNames.map((value, index) => {
+                                    const content = MainPagesConfig[value]
+                                    return content.type === 'notes-and-markers' ? <HeaderDropdownButtons key={`notesAndMarkersButtonLaptop${index}`} index={content.index ? true : false} title={content.title} url={content.url} /> : null
+                                })
+                            }
                         </ButtonArea>
-                        <ButtonArea title="Events">
-                            <HeaderDropdownButtons title="Note Encodings" url="/note-encodings" />
-                            <HeaderDropdownButtons title="Overdrive, Solo & BRE" url="/overdrive-solo-bre" />
-                            <HeaderDropdownButtons title="Trainer Sections" url="/trainer-sections" />
-                            <HeaderDropdownButtons title="Custom Chord Names" url="/custom-chord-names" />
+                        <ButtonArea title={HeaderConfig.events.title}>
+                            {
+                                PageNames.map((value, index) => {
+                                    const content = MainPagesConfig[value]
+                                    return content.type === 'events' ? <HeaderDropdownButtons key={`eventsButtonLaptop${index}`} index={content.index ? true : false} title={content.title} url={content.url} /> : null
+                                })
+                            }
                         </ButtonArea>
-                        <ButtonArea title="Mastering">
-                            <HeaderDropdownButtons title="Tunings" url="/tunings" />
-                            <HeaderDropdownButtons title="Authoring Rules" url="/authoring-rules" />
-                            <HeaderDropdownButtons title="Common MAGMA Errors" url="/common-magma-errors" />
+                        <ButtonArea title={HeaderConfig.mastering.title}>
+                            {
+                                PageNames.map((value, index) => {
+                                    const content = MainPagesConfig[value]
+                                    return content.type === 'mastering' ? <HeaderDropdownButtons key={`masteringButtonLaptop${index}`} index={content.index ? true : false} title={content.title} url={content.url} /> : null
+                                })
+                            }
                         </ButtonArea>
                     </div>
                     <button aria-label='Header Menu' className='border-2 p-1 border-main-white/25 ml-auto rounded-md flex laptop:hidden' onClick={ev => setHeaderMenu(true)}><FiMenu className='text-xl tablet-md:text-base' /></button>

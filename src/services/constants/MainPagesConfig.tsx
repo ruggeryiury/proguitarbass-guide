@@ -1,16 +1,3 @@
-interface MainPagesConfigContentProps {
-    index?: boolean
-    title: string,
-    url: string,
-    type: string,
-    anchors?: AnchorsLinkDocument[]
-}
-
-interface AnchorsLinkDocument {
-    title: string
-    id: string
-}
-
 const MainPagesConfig: { [key: string]: MainPagesConfigContentProps } = {
 
     // Basics
@@ -230,7 +217,7 @@ const MainPagesConfig: { [key: string]: MainPagesConfigContentProps } = {
         type: 'mastering'
     },
     'authoring-rules': {
-        title: '',
+        title: 'Authoring Rules',
         url: '/authoring-rules',
         type: 'mastering'
     },

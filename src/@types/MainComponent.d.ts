@@ -1,27 +1,39 @@
+// MainComponent.tsx
+
 interface MainComponentProps extends React.PropsWithChildren {
     /**
-     * The page ID, it will use to create the link anchors.
+     * The page content configuration, given by the `MainPagesConfig` object.
      */
-    id: string
-    /**
-     * The page title, it will appear on the left of the screen (desktop)
-     * and as the first element (mobile)
-     */
+    config: MainPagesConfigContentProps
+}
+
+interface MainPagesConfigContentProps {
+    index?: boolean
+    title: string,
+    url: string,
+    type: string,
+    anchors?: AnchorsLinkDocument[]
+}
+
+interface AnchorsLinkDocument {
     title: string
+    id: string
 }
 
 interface ScrollUpButtonProps {
     show: boolean
 }
 
+// MainComponent Components
+
 interface MainTitleProps extends React.PropsWithChildren {
     id: string
 }
-interface MainParagraphProps extends React.PropsWithChildren {}
+interface MainParagraphProps extends React.PropsWithChildren { }
 
 interface MainBlockProps extends React.PropsWithChildren {
     text?: string
-    bg?: string 
+    bg?: string
     measure?: boolean
     noMarginLeft?: boolean
     noMarginRight?: boolean
@@ -32,7 +44,7 @@ interface MainListProps extends React.PropsWithChildren {
     decimal?: boolean
 }
 
-interface MainOptionProps extends React.PropsWithChildren {}
+interface MainOptionProps extends React.PropsWithChildren { }
 
 interface MainHrefProps extends React.PropsWithChildren {
     href: string
