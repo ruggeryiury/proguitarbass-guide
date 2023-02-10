@@ -219,7 +219,25 @@ const MainPagesConfig: { [key: string]: MainPagesConfigContentProps } = {
     'authoring-rules': {
         title: 'Authoring Rules',
         url: '/authoring-rules',
-        type: 'mastering'
+        type: 'mastering',
+        anchors: [
+            {
+                title: 'Expert',
+                id: 'expert'
+            },
+            {
+                title: 'Hard',
+                id: 'hard'
+            },
+            {
+                title: 'Medium',
+                id: 'medium'
+            },
+            {
+                title: 'Easy',
+                id: 'easy'
+            }
+        ]
     },
     'common-magma-errors': {
         title: 'Common MAGMA Errors',

@@ -24,21 +24,21 @@ export const Index = () => {
 
     return (
         <MainComponent config={config}>
-            <Title id='introduction'>Introduction</Title>
+            <Title index={0} config={config} />
             <Paragraph>This guide will help you creating PRO Guitar/Bass parts for your customs, with every single PRO mode features explained.<br /><br />Here are some things you should consider before authoring PRO Guitar/Bass parts:</Paragraph>
             <ul className="list-disc">
                 <List title="Playability VS. Accuracy">All PRO Guitar/Bass charts must follow their 5-lane charts, but certain dynamics and articulations are way easier to portrait on 5-lane charts. Sometimes, you'll chart different guitar sections and realize there's a big fret jumping between one charted section to the other, Then this happens, feel free to underchart, and even take a 4th note space away from the chart to let the player position its hand to keep playing the song. Songs were meant to be playable and this rule applies to everything. If you're in doubt of what to do, ask to any PRO Guitar/Bass player for opinions about how's the best approach for your song.</List>
                 <List title="Basic music theory knowlegde">Just like PRO Keys parts, music theory plays a big role while charting PRO Guitar/Bass parts, so it's inevitable for you to understand basic concepts of playing guitar/bass to make PRO Guitar/Bass parts for your custom.</List>
             </ul>
 
-            <Title id='authoringTools'>Authoring Tools</Title>
+            <Title index={1} config={config} />
             <ul>
                 <Link to='https://rhythmgamingworld.com/forums/topic/pro-guitar-preview-for-reaper-v10/' title='PRO Guitar Preview Plugin for REAPER'>A REAPER JSFX plugin created by C3 user <em>Seil</em> that translates PRO Guitar/Bass notes to actual MIDI notes, so you can use any VST plugin (like REAPER's <em>ReaSynth</em>) to hear the notes you're charting.</Link>
                 <Link to='/proguitarbass-guide/static/REAPERNoteNames.zip' title='PRO Guitar/Bass note names for REAPER'>Including two text files for you to use on your PRO Guitar/Bass tracks on REAPER, one has note names for all difficulties and the other has just for Expert difficulty.</Link>
                 <Link to='https://code.google.com/archive/p/ziggy-pro-editor/' title="Ziggy's PRO Editor">Since CAT can't do automatic PRO Guitar/Bass reductions, <em>Ziggy's PRO Editor</em> might be handy tool for you to auto-generate EMH difficulties in a flash! You can find a tutorial to generate reductions on the <Href href='/reductions'>Reductions</Href> page.</Link>
             </ul>
 
-            <Title id='preparingYourReaperProject'>Preparing Your Reaper Project</Title>
+            <Title index={2} config={config} />
             <ol className="list-decimal">
                 <List title='Install PRO Guitar Preview, and the PRO Guitar/Bass note names' decimal>
                     The <em>PRO Guitar/Bass Preview plugin</em> must be placed anywhere inside <em className='text-cyan-500 break-words'>AppData\Roaming\REAPER\Effects</em>, and the note names text files must be placed where you have all the other note names text files that is installed using the RBN2 Authoring Tools.
@@ -91,7 +91,7 @@ export const Notes = () => {
                 You must handle with two basic things while authoring PRO Guitar/Bass notes, that are the strings and frets.
             </Paragraph>
 
-            <Title id='strings'>Strings</Title>
+            <Title index={0} config={config} />
             <Paragraph>
                 To determine the strings of a note, we use these MIDI notes:
             </Paragraph>
@@ -102,7 +102,7 @@ export const Notes = () => {
                 <Options>From <Block>C0</Block> (24) to <Block>F0</Block> (29) for Easy difficulty.</Options>
             </ul>
 
-            <Title id='frets'>Frets</Title>
+            <Title index={1} config={config} />
             <Paragraph>
                 The <strong>note velocity</strong> is what determines the fret of the note, starting from velocity <Block children="100" /> (open string note) to <Block children="117" /> (for normal 17-fret guitar/bass track) or <Block children="122" /> (for 22-fret guitar/bass track).
             </Paragraph>
@@ -125,14 +125,14 @@ export const Chords = () => {
                 A chord is a group of notes sounded together, as a basis of harmony. On Rock Band 3, they're displayed as blue shapes, displaying only the lower note of a chord on its string and creating a shape based on it. Open notes will be displayed as white.
             </Paragraph>
 
-            <Title id='rootNoteIndicators'>Root Note Indicators</Title>
+            <Title index={0} config={config} />
             <Paragraph>
                 The game automatically calculates the invervals of each note of a chord and displays a name for it, but we need to tell it what scale the chord is. For this, we have <strong>Root Note Indicators</strong>. Placing a note aligned with a chord, starting with <Block>E-2</Block> (4), going up chromatically to <Block>D♯-1</Block> (15), you tell the game what scale the aligned chord (and following chords) are. You don't need to put a root note on <strong>every</strong> chord in a sequence, just place it aligned to the first chord, and all the following chords will be named using the scale you placed, until you change it to another root note.
                 <br /><br />
                 Root Note Indications don't need to be longer than a 1/16 note, even if the first chord aligned to it is a sustained one.
             </Paragraph>
 
-            <Title id='slashChords'>Slash Chords</Title>
+            <Title index={1} config={config} />
             <Paragraph>
                 A slash chord is a chord which indicates emphasis of a bass note other than the root of the chord. When a chord is played, it is typically assumed the bass will emphasize the root of the chord. Occasionally, a different note is preferred and results in a chord with an alternate bass note.
                 <br /><br />
@@ -143,17 +143,17 @@ export const Chords = () => {
                 On slash chords, the game will always choose the bass note based on the note of the lowest string.
             </Paragraph>
 
-            <Title id="omittingMutedStringsfromChords">Omitting Muted Strings from Chords</Title>
+            <Title index={2} config={config} />
             <Paragraph>
                 For chords with any muted string in-between, you must omit the muted string. If you encode a single string mute on a chord, the whole chord will appear muted in-game.
             </Paragraph>
 
-            <Title id='hideChordName'>Hide Chord Name</Title>
+            <Title index={3} config={config} />
             <Paragraph>
                 The <strong className="text-cyan-500">HIDE CHORD NAME MARKER</strong> <Block>F-1</Block> (17) is handy when you deal with chords that don't consistently belong to any scale, or don't have any big importance on naming it, like two-string oblique bends. To hide chord names, place a <strong className="text-cyan-500">HIDE CHORD NAME MARKER</strong> encopassing any root note indicator you want its name not to be displayed in-game. After any hide chord name marker, the game will search chord names based on the last root note indicator placed (even if placed within the marker), unless you put another root note indicator aligned with any first chord after the marker.
             </Paragraph>
 
-            <Title id='sharpFlatSwap'>Sharp/Flat Swap</Title>
+            <Title index={4} config={config} />
             <Paragraph>
                 The <strong className="text-cyan-500">SHARP/FLAT SWAP MARKER</strong> <Block>F♯-1</Block> (18) is used to change the accident symbols used on chords. The default accident symbol used on chords is based on the song's key signature and tonality (that is defined on the song's .dta file) and it follows the <a href='https://en.wikipedia.org/wiki/Circle_of_fifths' target="_blank" rel="noreferrer" className='tracking-tight inline-flex text-cyan-500 hover:underline'>circle of fifths</a> theory, but when song key changes in the middle of the song, the <strong className="text-cyan-500">SHARP/FLAT SWAP MARKER</strong> should be used to fit the symbol used on that specific key.
                 <br /><br />
@@ -238,7 +238,7 @@ export const LeftHandPosition = () => {
                 Left Hand Position notes are charted on MIDI note <Block>C7</Block> (108). In-game, nothing is fisically or visually influenced by these notes, but they're still required, as you can get <Href href="/common-magma-errors">MAGMA errors</Href> related to them.
             </Paragraph>
 
-            <Title id='concept'>Concept</Title>
+            <Title index={0} config={config} />
             <img src={IndexFingerExampleImg} alt='Left Hand Position Note explained' width='1266px' height='620px' className="hidden tablet-md:flex mb-4" />
             <img src={IndexFingerExampleImgMobile} alt='Left Hand Position Note explained' width='1266px' height='620px' className="flex tablet-md:hidden mb-4" />
             <Paragraph>
@@ -249,7 +249,7 @@ export const LeftHandPosition = () => {
                 The first <strong className="text-cyan-500">LEFT HAND POSITION NOTE</strong> must be aligned with the first note of the track, and so on. You don't really have to place a <strong className="text-cyan-500">LEFT HAND POSITION NOTE</strong> on every note of the song, you only need to place another <strong className="text-cyan-500">LEFT HAND POSITION NOTE</strong> when you see the left hand position should be changed to follow the range of all following notes.
             </Paragraph>
 
-            <Title id='usesOnCustomSongs'>Uses on Customs Songs</Title>
+            <Title index={1} config={config} />
             <Paragraph>
                 You can use the <strong className="text-cyan-500">LEFT HAND POSITION NOTES</strong> to make 5-lane Guitar/Bass animations look more accurate by simply copying them to the <Block>PART GUITAR/BASS</Block> tracks and making all proper changes to use them as animations.
             </Paragraph>
@@ -323,7 +323,7 @@ export const Slide = () => {
                 Slide notes and chords appear in-game with curved sustain tails, telling the player which direction it must slide the note/chord. To make a note/chord a slide one, you must place a <strong className="text-cyan-500">SLIDE MARKER</strong> <Block children="G6" /> (103) (for Expert difficulty) encopassing the whole note/chord you want to be a slide one.
             </Paragraph>
 
-            <Title id='slideDirectionRules'>Slide Direction Rules</Title>
+            <Title index={0} config={config} />
             <Paragraph>
                 <em>Old tutorials believed that slide directions was based on the <strong className="text-cyan-500">SLIDE MARKER</strong> velocity, but they couldn't explain why some notes didn't respect that rule, with the slide going to the opposite direction that is was intended to go.</em>
                 <br /><br />
@@ -341,17 +341,17 @@ export const Slide = () => {
                 You can also encopass multiple notes/chords within one <strong className="text-cyan-500">SLIDE MARKER</strong> just like on <Href href="/hopo">HO/POs</Href>, but every note/chord will follow the rules according to each specific situation.
             </Paragraph>
 
-            <Title id='theFretRule'>The Fret Rule</Title>
+            <Title index={1} config={config} />
             <Paragraph>
                 This rule is based on the <strong>note velocity</strong> (in other words, the <span className="text-cyan-500">note fret</span>). Slides from open notes [0] to fret [7] with go <span className="text-cyan-500">up</span>, slides from fret [8] notes to fret [17] (or fret [22], for 22-fret guitar/bass tracks) will go <span className="text-cyan-500">down</span>.
             </Paragraph>
 
-            <Title id="the1_16NoteGapRule">The 1/16 Note Gap Rule</Title>
+            <Title index={2} config={config} />
             <Paragraph>
                 <strong>If the slide note's sustail tail ends with a gap of 1/16 note (or closer) from a following note</strong>, the slide will go to the direction of that note. If the following note has the same fret of the slide note, the slide direction will always go <span className="text-cyan-500">down</span>.
             </Paragraph>
 
-            <Title id="behaviorWithChords">Behavior with Chords</Title>
+            <Title index={3} config={config} />
             <Paragraph>
                 With chords, the fret from the <span className="text-cyan-500">lowest string</span> is what counts as reference, and this <strong>includes open notes as well</strong>.
             </Paragraph>
@@ -451,7 +451,7 @@ export const TrillTremolo = () => {
                 The threshold of 160ms is a hard coded number, so edge cases can creep up where using a trill marker may not feel as good as just playing the authored rhythm. Using Trill and Tremolo lanes as opposed to an authored section is a judgement call, but in general if the original playing happens very fast and without regard to tempo, if it would be very difficult to match the audio, or if there would be a very long stretch of 16th or 32nd notes it might be a good candidate for a trill or tremolo section.
             </Paragraph>
 
-            <Title id='midiNotes'>MIDI Notes</Title>
+            <Title index={0} config={config} />
             <ul className="list-disc">
                 <Options>
                     <strong className="text-cyan-500">TREMOLO MARKERS</strong> are placed on MIDI note <Block>F♯8</Block> and are used on fast, odd rhythm strumming sections.
@@ -461,7 +461,7 @@ export const TrillTremolo = () => {
                 </Options>
             </ul>
 
-            <Title id='onHardDifficulty'>On Hard Difficulty</Title>
+            <Title index={1} config={config} />
             <Paragraph>
                 Both <strong className="text-cyan-500">TREMOLO</strong> and <strong className="text-cyan-500">TRILL MARKERS</strong> can be placed on Hard difficulty if you place these markers under velocity 40.
             </Paragraph>
@@ -484,7 +484,7 @@ export const NoteEncodings = () => {
                 All PRO Guitar/Bass functions are encoded using markers and channel encodings. Here is all possible channel encodings and their respective uses.
             </Paragraph>
 
-            <Title id='channelUsedOnNotes'>Channel Used on Notes</Title>
+            <Title index={0} config={config} />
             <ul className="list-disc">
                 <Options>
                     <Block bg="#8c0000">MIDI CHANNEL 1</Block>: The default channel for new notes on REAPER. On PRO Guitar/Bass authoring, it is used to display normal notes.
@@ -507,7 +507,7 @@ export const NoteEncodings = () => {
             </ul>
             <Paragraph></Paragraph>
 
-            <Title id='channelUsedOnMarkers'>Channel Used on Markers</Title>
+            <Title index={1} config={config} />
             <ul className="list-disc">
                 <Options>
                     <Block bg="#8c6f5e">MIDI CHANNEL 12</Block>: Used on <Href href="/slide-notes">Slide Markers</Href> to <em>reverse a slide direction</em> based on each note rule.
@@ -543,15 +543,15 @@ export const OverdriveSoloBRE = () => {
             <Paragraph>
                 <em>Overdrives</em>, <em>Solo markers</em>, and <em>Big Rock Endings</em> <strong>must match</strong> the 5-lane Guitar/Bass sections. If you already have 5-lane Guitar/Bass parts authored, just copy and paste on the PRO Guitar/Bass tracks.
             </Paragraph>
-            <Title id='overdrive'>Overdrive</Title>
+            <Title index={0} config={config} />
             <Paragraph>
                 Overdrives are authored on MIDI note <Block>G♯7</Block> (116), the same note for 5-lane Guitar/Bass as well.
             </Paragraph>
-            <Title id='soloMarkers'>Solo Markers</Title>
+            <Title index={1} config={config} />
             <Paragraph>
                 Solo markers are authored on MIDI note <Block>G7</Block> (115). This note is not the same note shared by 5-lane Guitar/Bass tracks (which they use MIDI note <Block>G6</Block> (103)), so don't forget to place it correctly.
             </Paragraph>
-            <Title id='bigRockEndings'>Big Rock Endings</Title>
+            <Title index={2} config={config} />
             <Paragraph>
                 Big Rock Endings are authored from MIDI notes:
                 <ul>
@@ -582,7 +582,7 @@ export const TrainerSections = () => {
                 Trainer sections are authored as text events. These text events must be placed on the 17-fret tracks only.
             </Paragraph>
 
-            <Title id='forProGuitar'>For PRO Guitar</Title>
+            <Title index={0} config={config} />
             <ul className="list-disc">
                 <Options>
                     <Block>[begin_pg song_trainer_pg_#]</Block> at the beginning of the trainer section, where # represents the trainer's count.
@@ -593,7 +593,7 @@ export const TrainerSections = () => {
             </ul>
             <Paragraph />
 
-            <Title id='forProBass'>For PRO Bass</Title>
+            <Title index={1} config={config} />
             <ul className="list-disc">
                 <Options>
                     <Block>[begin_pb song_trainer_pb_#]</Block> at the beginning of the trainer section, where # represents the trainer's count.
@@ -604,7 +604,7 @@ export const TrainerSections = () => {
             </ul>
             <Paragraph />
 
-            <Title id='loopedTrainerSections'>Looped Trainer Sections</Title>
+            <Title index={2} config={config} />
             <Paragraph>
                 By default, trainers create a gap at the end of the section for the player to breathe before the section starts again. On looped trainers, there's no pause between the beginning and the end of a section. To make a trainer section a looped one, add these text events anywhere between the beginning and the end of the trainer section:
             </Paragraph>
@@ -618,7 +618,7 @@ export const TrainerSections = () => {
             </ul>
             <Paragraph />
 
-            <Title id='rules'>Rules</Title>
+            <Title index={3} config={config} />
             <ul className="list-disc">
                 <List title='Looped trainer sections must be grid-snapped'></List>
                 <List title='Avoid making bigger sections for solo parts'>The idea is to slice solos into parts where you can train these specific parts and try to connect them while playing.</List>
@@ -668,12 +668,40 @@ export const AuthoringRules = () => {
 
     useEffect(() => {
         Context.setCurrentPage(id)
+
     })
 
     return (
         <MainComponent config={config}>
+
+            <Title index={0} config={config} />
             <Paragraph>
+
             </Paragraph>
+
+            <Title index={1} config={config} />
+            <Paragraph>
+                Hard should be a slightly reduced version of Expert (for example, removing HOPOs, or reducing number of notes played in particularly fast parts of soloes.)
+                If you need further guidance on reducing your Expert pro chart to Hard, it's surprisingly useful to use the Hard 5-lane guitar chart as a base.
+            </Paragraph>
+
+            <Title index={2} config={config} />
+            <Paragraph>
+                Medium is a significantly more reduced version of the original Expert chart.
+                Chords are still allowed, but generally only the first two strings
+                In general, you want to stick to around 1 note/chord every other beat (so in a 4/4 time measure, there would be two notes/chords around beats 1 and 3).
+                However, if a song has a long streak of singular notes (i.e. the latter part of Uncontrollable Urge on bass), you can usually get away with having one note/chord per beat - do whatever feels right based on the song.
+            </Paragraph>
+
+            <Title index={3} config={config} />
+            <Paragraph>
+                Easy has zero chords whatsoever - reduce any chords down to their root note.
+                In addition to this, while on Medium you generally want to stick to 1 note/chord every other beat, on Easy you halve this to 1 note/chord every 4 beats (so in 4/4 time, each measure would have one note on beat 1).
+                It should be noted that there are obviously exceptions to this rule, such as if a song is in a time signature greater than 4/4. In this case, having two notes spaced apart evenly per measure would be acceptable.
+                Like Medium, if a song has a long streak of singular notes, you can get away with doubling the frequency that notes appear in each measure; again, do what feels right based on the song.
+            </Paragraph>
+
+
         </MainComponent>
     )
 }
@@ -690,28 +718,28 @@ export const CommonMAGMAErrors = () => {
     return (
         <MainComponent config={config}>
 
-            <Title id='relatedToGems'>Related to Gems</Title>
+            <Title index={0} config={config} />
             <Window title={
                 <span>Gem at <Block measure /> in easy/medium/hard/expert difficulty has no slots</span>
             }>
                 Ghost notes, used on <Href href='/'>Arpeggio Markers</Href>, where found somewhere <strong>without</strong> an Arpeggio marker. This happens sometimes when you use automatic reductions using Ziggy's. and these notes is probably is on the auto-generated difficulties notes (EMH). Track your Arpeggios markers on the Expert difficulty and check the lowest difficulties that were generated.
             </Window>
 
-            <Title id='relatedToMIDINotes'>Related to MIDI Notes</Title>
+            <Title index={1} config={config} />
             <Window title={
                 <span>MIDI note <Block>108</Block> at <Block measure /> has invalid velocity ???</span>
             }>
                 A <Href href='/'>Left Hand Position note</Href> was found with <strong>velocity below 100 or above 122</strong>.
             </Window>
 
-            <Title id='relatedToChords'>Related to Chords</Title>
+            <Title index={2} config={config} />
             <Window title={
                 <span>No root note set for gem at <Block measure /></span>
             }>
                 If a chord is found on any track, you must place a <Href href='/chords'>Root Note Indicator or a Hide Chord Marker</Href> <strong>before or aligned to it</strong>.
             </Window>
 
-            <Title id='relatedToLHP'>Related to Left Hand Position</Title>
+            <Title index={3} config={config} />
             <Window title={
                 <span>No left hand position set for gem at <Block measure /></span>
             }>
@@ -728,14 +756,14 @@ export const CommonMAGMAErrors = () => {
                 The specified gem velocity is <strong>too high for the declared <Href href='/left-hand-position'>Left Hand Position note</Href> before or aligned to it</strong>.
             </Window>
 
-            <Title id='relatedToOverdrive'>Related to Overdrive</Title>
+            <Title index={4} config={config} />
             <Window title={
                 <span>Overdrive phrase at <Block>[XX:X:XXX-XX:X:XXX]</Block> for guitar/bass but not real_guitar/real_bass</span>
             }>
                 <strong>Overdrive Phrases on PRO Guitar/Bass must be identical from the 5-lane guitar/bass tracks</strong>. There's a CAT option to copy overdrive from 5-lane guitar/bass tracks
             </Window>
 
-            <Title id='otherErrors'>Other Errors</Title>
+            <Title index={5} config={config} />
             <Window title={
                 <span>Real Guitar On Midi Message out of range at tick <Block measure /> with pitch 124/125</span>
             }>

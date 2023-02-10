@@ -26,8 +26,9 @@ interface ScrollUpButtonProps {
 
 // MainComponent Components
 
-interface MainTitleProps extends React.PropsWithChildren {
-    id: string
+interface MainTitleProps {
+    index: number
+    config: MainPagesConfigContentProps
 }
 interface MainParagraphProps extends React.PropsWithChildren { }
 

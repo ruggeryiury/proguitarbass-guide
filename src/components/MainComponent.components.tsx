@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom"
 
-export const MainTitle = ({ children, id }: MainTitleProps) => {
+export const MainTitle = ({ index, config }: MainTitleProps) => {
 
-    return <h1 id={`#${id}`} className="!leading-[1.10] w-full text-2xl tablet-md:text-4xl border-b-2 border-main-white/25 text-left px-4 py-3 mb-4"> {typeof children === 'string' ? children.toUpperCase() : children} </h1>
+    if (config.anchors) {
+        const anchor = config.anchors[index]
+
+        return <h1 id={`#Anchor_${anchor.id}`} className="!leading-[1.10] w-full text-2xl tablet-md:text-4xl border-b-2 border-main-white/25 text-left px-4 py-3 mb-4">{anchor.title.toUpperCase()}</h1>
+    }
+
+    return null
 }
 
 export const MainParagraph = ({ children }: MainParagraphProps) => {
@@ -63,7 +69,7 @@ export const MainLink = ({ children, to, title }: MainLinkProps) => {
 }
 
 export const MainWindow = ({ children, title }: MainWindowProps) => {
-    
+
     return (
         <ul className="bg-neutral-800/90 rounded p-2 mb-4 last:mb-0">
             <li className='list-inside list-disc flex flex-col'>
