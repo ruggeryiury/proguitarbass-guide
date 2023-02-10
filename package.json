@@ -25,14 +25,14 @@
     "react-intersection-observer": "^9.4.1",
     "react-router-dom": "^6.6.1",
     "react-router-hash-link": "^2.4.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "sass": "^1.57.1",
+    "typescript": "^4.9.4"
   },
   "devDependencies": {
     "@types/react-router-hash-link": "^2.4.5",
     "gh-pages": "^4.0.0",
-    "react-scripts": "5.0.1",
-    "sass": "^1.57.1",
-    "typescript": "^4.9.4"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "predeploy": "npm run build",
