@@ -11,15 +11,10 @@
 	"start_url": "/proguitarbass-guide/",
 	"icons": [
 		{
-			"src": "maskable.png",
+			"src": "logo512.png",
 			"sizes": "512x512",
 			"type": "image/png",
 			"purpose": "any maskable"
-		},
-		{
-			"src": "logo512.png",
-			"sizes": "512x512",
-			"type": "image/png"
 		},
 		{
 			"src": "logo384.png",
