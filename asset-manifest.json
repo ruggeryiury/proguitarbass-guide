@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/proguitarbass-guide/static/css/main.5dc36867.css",
-    "main.js": "/proguitarbass-guide/static/js/main.b883150e.js",
+    "main.js": "/proguitarbass-guide/static/js/main.be60bdf6.js",
     "static/media/index-finger.webp": "/proguitarbass-guide/static/media/index-finger.2fe19b5eb2298be474d0.webp",
     "static/media/index-finger-mobile.webp": "/proguitarbass-guide/static/media/index-finger-mobile.50a01a1a58af2010c075.webp",
     "static/media/background.webp": "/proguitarbass-guide/static/media/background.64d384e5878ab3ec4412.webp",
@@ -12,15 +12,15 @@
     "static/media/Aeroport.woff": "/proguitarbass-guide/static/media/Aeroport.64ece82e326e802cd42a.woff",
     "static/media/Pentatonic-RegularCond.woff": "/proguitarbass-guide/static/media/Pentatonic-RegularCond.31908b280540a264b816.woff",
     "static/media/Pentatonic-Regular.woff": "/proguitarbass-guide/static/media/Pentatonic-Regular.f6320f4c5e7fb65c0946.woff",
-    "static/media/progtr.webp": "/proguitarbass-guide/static/media/progtr.59d902713e41312c32a2.webp",
-    "static/media/probass.webp": "/proguitarbass-guide/static/media/probass.7543619ade3ebfde2cde.webp",
     "static/media/pattern-transparency-sm.webp": "/proguitarbass-guide/static/media/pattern-transparency-sm.cc265f0ff77ba4d4d775.webp",
+    "static/media/probass.webp": "/proguitarbass-guide/static/media/probass.b8a623b623dbc9c821e5.webp",
+    "static/media/progtr.webp": "/proguitarbass-guide/static/media/progtr.275fb199233995f88f3c.webp",
     "index.html": "/proguitarbass-guide/index.html",
     "main.5dc36867.css.map": "/proguitarbass-guide/static/css/main.5dc36867.css.map",
-    "main.b883150e.js.map": "/proguitarbass-guide/static/js/main.b883150e.js.map"
+    "main.be60bdf6.js.map": "/proguitarbass-guide/static/js/main.be60bdf6.js.map"
   },
   "entrypoints": [
     "static/css/main.5dc36867.css",
-    "static/js/main.b883150e.js"
+    "static/js/main.be60bdf6.js"
   ]
 }
