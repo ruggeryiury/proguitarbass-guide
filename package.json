@@ -1,6 +1,6 @@
 {
   "name": "proguitarbass-guide",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "React App version of my famous PRO Guitar/Bass guide for Rock Band 3 Customs.",
   "keywords": [
     "typescript",
@@ -8,45 +8,41 @@
     "guide",
     "rockband3"
   ],
-  "private": true,
+  "private": false,
   "homepage": "https://ruggeryiury.github.io/proguitarbass-guide",
-  "dependencies": {
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.11",
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.10",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "animate.css": "^4.1.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
-    "react-intersection-observer": "^9.4.1",
-    "react-router-dom": "^6.6.1",
-    "react-router-hash-link": "^2.4.3",
-    "web-vitals": "^2.1.4",
-    "sass": "^1.57.1",
-    "typescript": "^4.9.4"
-  },
-  "devDependencies": {
-    "@types/react-router-hash-link": "^2.4.5",
-    "gh-pages": "^4.0.0",
-    "react-scripts": "5.0.1"
+  "main": "index.js",
+  "repository": "https://github.com/ruggeryiury/proguitarbass-guide.git",
+  "license": "MIT",
+  "author": {
+    "email": "ruggeryiury@gmail.com",
+    "name": "Ruggery Iury Corrêa"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "format": "prettier --write .",
+    "start": "react-scripts start"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "framer-motion": "^11.0.24",
+    "i18next": "^23.10.1",
+    "i18next-browser-languagedetector": "^7.2.1",
+    "i18next-http-backend": "^2.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^14.1.0",
+    "react-icons": "^5.0.1",
+    "react-intersection-observer": "^9.8.1",
+    "react-router-dom": "^6.22.3",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "@types/react": "^18.2.73",
+    "@types/react-dom": "^18.2.23",
+    "eslint": "^8.57.0",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.72.0",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.3"
   },
   "browserslist": {
     "production": [

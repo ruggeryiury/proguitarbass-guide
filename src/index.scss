@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/** Fonts */
+@font-face {
+  font-family: "Aeroport";
+  src:url("./assets/fonts/Aeroport.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aeroport";
+  font-weight: bold;
+  src:url("./assets/fonts/Aeroport_Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aeroport";
+  font-style: italic;
+  src:url("./assets/fonts/Aeroport_Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aeroport";
+  font-weight: bold;
+  font-style: italic;
+  src:url("./assets/fonts/Aeroport_Bold_Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aeroport";
+  font-weight: lighter;
+  src:url("./assets/fonts/Aeroport_Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aeroport";
+  font-weight: lighter;
+  font-style: italic;
+  src:url("./assets/fonts/Aeroport_Light_Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aeroport";
+  font-weight: 500;
+  src:url("./assets/fonts/Aeroport_Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aeroport";
+  font-weight: 500;
+  font-style: italic;
+  src:url("./assets/fonts/Aeroport_Medium_Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aeroport";
+  font-family: monospace;
+  src:url("./assets/fonts/Aeroport_Mono.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pentatonic";
+  src:url("./assets/fonts/Pentatonic_Regular.woff2") format("woff2");
+}
+
+
+@font-face {
+  font-family: "Pentatonic";
+  font-weight: bold;
+  src:url("./assets/fonts/Pentatonic_Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pentatonic";
+  font-variant: small-caps;
+  src:url("./assets/fonts/Pentatonic_Regular_Small.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pentatonic";
+  font-variant: small-caps;
+  font-weight: bold;
+  src:url("./assets/fonts/Pentatonic_Bold_Small.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pentatonic";
+  font-stretch: condensed;
+  src:url("./assets/fonts/Pentatonic_Regular_Cond.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pentatonic Alt One";
+  src:url("./assets/fonts/Pentatonic_Regular_Alt_One.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pentatonic Alt Two";
+  src:url("./assets/fonts/Pentatonic_Regular_Alt_Two.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pentatonic Alt One";
+  font-weight: bold;
+  src:url("./assets/fonts/Pentatonic_Bold_Alt_One.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pentatonic Alt Two";
+  font-weight: bold;
+  src:url("./assets/fonts/Pentatonic_Bold_Alt_Two.woff2") format("woff2");
+}
