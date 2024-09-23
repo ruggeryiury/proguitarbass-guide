@@ -25,7 +25,11 @@ module.exports = {
         'main-white': '#EEE',
         'main-black': '#0A0A0A',
       },
-    }
+      backgroundImage: {
+        'image-background': 'url("./assets/images/background.webp")',
+        'image-pattern-transparency-sm': 'url("./src/assets/images/pattern-transparency-sm.webp")'
+      }
+    },
   },
   plugins: [
     plugin(function ({ addUtilities }) {
@@ -34,8 +38,8 @@ module.exports = {
           'font-stretch': 'condensed',
         },
         '.font-unstretched': {
-          'font-stretch': 'normal'
-        }
+          'font-stretch': 'normal',
+        },
       })
     }),
   ],
